@@ -5,6 +5,7 @@
 
 VAGRANTFILE_API_VERSION = "2"
 Vagrant.require_version ">= 1.5.0" , "<= 1.8.6"
+Vagrant::DEFAULT_SERVER_URL.replace('https://vagrantcloud.com')
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
