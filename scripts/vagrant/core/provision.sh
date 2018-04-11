@@ -2,7 +2,7 @@
 # Original content copyright (c) 2014 dpen2000 licensed under the MIT license
 
 # some defaults
-NODE_VERSION="5.x" # 0.10 | 0.12 | 4.x | 5.x | 6.x
+NODE_VERSION="6.x" # 0.10 | 0.12 | 4.x | 5.x | 6.x
 
 # inform apt that there's no user to answer interactive questions
 export DEBIAN_FRONTEND=noninteractive
