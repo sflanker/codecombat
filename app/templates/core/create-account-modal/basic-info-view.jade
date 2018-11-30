@@ -10,29 +10,29 @@ form#basic-info-form.modal-body.basic-info
         .row.full-name
           .col-xs-offset-3(class=(path === 'teacher' ? 'col-xs-3' : 'col-xs-5'))
             .form-group
-              label.control-label(for="first-name-input")
-                span(data-i18n="general.first_name")
-              input#first-name-input.form-control.input-lg(name="firstName" value=view.signupState.get('signupForm').firstName dir="auto")
+              //label.control-label(for="first-name-input")
+                //span(data-i18n="general.first_name")
+              //-input#first-name-input.form-control.input-lg(name="firstName" value=view.signupState.get('signupForm').firstName dir="auto")
           div(class=(path === 'teacher' ? 'col-xs-3' : 'col-xs-4'))
             if view.signupState.get('path') === 'teacher'
               .last-name.form-group
-                label.control-label(for="last-name-input")
-                  span(data-i18n="general.last_name")
-                input#last-name-input.form-control.input-lg(name="lastName" value=view.signupState.get('signupForm').lastName dir="auto")
+                //label.control-label(for="last-name-input")
+                  //span(data-i18n="general.last_name")
+                //-input#last-name-input.form-control.input-lg(name="lastName" value=view.signupState.get('signupForm').lastName dir="auto")
             else
               .last-initial.form-group
-                label.control-label(for="last-name-input")
-                  span(data-i18n="general.last_initial")
-                input#last-name-input.form-control.input-lg(name="lastName" maxlength="1" value=view.signupState.get('signupForm').lastName dir="auto")
+                //label.control-label(for="last-name-input")
+                  //span(data-i18n="general.last_initial")
+                //-input#last-name-input.form-control.input-lg(name="lastName" maxlength="1" value=view.signupState.get('signupForm').lastName dir="auto")
       .form-group
         .row.rtl-allowed
           .col-xs-5.col-xs-offset-3.rtl-allowed
-            label.control-label(for="email-input")
-              span(data-i18n="share_progress_modal.form_label")
+            //label.control-label(for="email-input")
+              //span(data-i18n="share_progress_modal.form_label")
             if view.signupState.get('path') === 'student'
               .help-block.optional-help-block.pull-right
                 span.optional-text(data-i18n="signup.optional")
-            input.form-control.input-lg#email-input(name="email" type="email" value=view.signupState.get('signupForm').email dir="auto")
+            //-input.form-control.input-lg#email-input(name="email" type="email" value=view.signupState.get('signupForm').email dir="auto")
           .col-xs-4.email-check.fancy-error.rtl-allowed
             - var checkEmailState = view.state.get('checkEmailState');
             if checkEmailState === 'checking'
@@ -55,9 +55,9 @@ form#basic-info-form.modal-body.basic-info
         .form-group
           .row.rtl-allowed
             .col-xs-5.col-xs-offset-3.rtl-allowed
-              label.control-label(for="username-input")
-                span(data-i18n="general.username")
-              input.form-control.input-lg#username-input(name="name" value=view.signupState.get('signupForm').name dir="auto")
+              //label.control-label(for="username-input")
+                //span(data-i18n="general.username")
+              //-input.form-control.input-lg#username-input(name="name" value=view.signupState.get('signupForm').name dir="auto")
             .col-xs-4.name-check.fancy-error.rtl-allowed
               - var checkNameState = view.state.get('checkNameState');
               if checkNameState === 'checking'
@@ -76,9 +76,9 @@ form#basic-info-form.modal-body.basic-info
       .form-group
         .row.rtl-allowed
           .col-xs-5.col-xs-offset-3.rtl-allowed
-            label.control-label(for="password-input")
-              span(data-i18n="general.password")
-            input.form-control.input-lg#password-input(name="password" type="password" value=view.signupState.get('signupForm').password dir="auto")
+            //label.control-label(for="password-input")
+              //span(data-i18n="general.password")
+            //-input.form-control.input-lg#password-input(name="password" type="password" value=view.signupState.get('signupForm').password dir="auto")
 
       .error-area
         - var error = view.state.get('error');
@@ -87,17 +87,17 @@ form#basic-info-form.modal-body.basic-info
             .col-xs-7.col-xs-offset-3
           .alert.alert-danger= error
 
-    .hr-text
-      hr
-      span(data-i18n="general.or")
+    //-.hr-text
+      //-hr
+      //-span(data-i18n="general.or")
 
     .auth-network-logins.text-center
       .gplus-login
         a#gplus-signup-btn.network-login(disabled=!view.signupState.get('gplusEnabled'), data-sso-used="gplus")
           img.gplus-logo(src="/images/pages/modal/auth/gplus_sso_button2.png", draggable="false")
-      .facebook-login
-        a#facebook-signup-btn.network-login(disabled=!view.signupState.get('facebookEnabled'), data-sso-used="facebook")
-          img.facebook-logo(src="/images/pages/modal/auth/facebook_sso_button2.png", draggable="false")
+      //-.facebook-login
+      //-  a#facebook-signup-btn.network-login(disabled=!view.signupState.get('facebookEnabled'), data-sso-used="facebook")
+      //-    img.facebook-logo(src="/images/pages/modal/auth/facebook_sso_button2.png", draggable="false")
 
     // TODO: turn on once we can ask about school inside ConfirmationView
     if view.signupState.get('path') === 'individual' && (!me.get('country') || me.get('country') == 'united-states')
