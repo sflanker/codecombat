@@ -17,7 +17,7 @@ config.timeout = parseInt(process.env.COCO_TIMEOUT) or 60*1000
 config.chinaDomain = "cn.codecombat.com;ccombat.cn;contributors.codecombat.com"
 config.brazilDomain = "br.codecombat.com;contributors.codecombat.com"
 config.port = process.env.COCO_PORT or process.env.COCO_NODE_PORT or process.env.PORT  or 3000
-config.ssl_port = process.env.COCO_SSL_PORT or process.env.COCO_SSL_NODE_PORT or 3443
+config.ssl_port = process.env.COCO_SSL_PORT or process.env.COCO_SSL_NODE_PORT or process.env.PORT or 3443
 config.cloudflare =
   token: process.env.COCO_CLOUDFLARE_API_KEY or ''
 
