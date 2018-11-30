@@ -405,9 +405,10 @@ setupUserDataRoute = (app) ->
   shouldRedirectToCountryServer = (req, country, host) ->
     reqHost = (req.hostname ? req.host).toLowerCase()  # Work around express 3.0
     hosts = host.split /;/g
-    if req.country is country and reqHost not in hosts and reqHost.indexOf(config.unsafeContentHostname) is -1
+    if config.isProduction and req.country is country and reqHost not in hosts and reqHost.indexOf(config.unsafeContentHostname) is -1
       hosts[0]
     else
+      log.info 'No need for country redirect'
       undefined
 
   app.get '/user-data', wrap (req, res) ->
