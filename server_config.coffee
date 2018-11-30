@@ -19,7 +19,7 @@ config.chinaInfra = process.env.COCO_CHINA_INFRASTRUCTURE or false
 
 config.brazilDomain = "br.codecombat.com;contributors.codecombat.com"
 config.port = process.env.COCO_PORT or process.env.COCO_NODE_PORT or process.env.PORT  or 3000
-config.ssl_port = process.env.COCO_SSL_PORT or process.env.COCO_SSL_NODE_PORT or 3443
+config.ssl_port = process.env.COCO_SSL_PORT or process.env.COCO_SSL_NODE_PORT or process.env.PORT or 3443
 config.cloudflare =
   token: process.env.COCO_CLOUDFLARE_API_KEY or ''
   email: process.env.COCO_CLOUDFLARE_API_EMAIL or ''
