@@ -61,7 +61,8 @@ nbproject
 tmp/
 
 # Brunch output
-public/
+#public/
+## Do include public for publish through git to heroku
 
 # Redis?
 dump.rdb
