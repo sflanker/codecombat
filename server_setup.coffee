@@ -302,7 +302,8 @@ exports.setupMiddleware = (app) ->
   setupSecureMiddleware app
   setupPerfMonMiddleware app
 
-  setupDomainFilterMiddleware app
+  # Don't setup domain filter in case it is causing redirects
+  #setupDomainFilterMiddleware app
   setupQuickBailToMainHTML app
 
 
