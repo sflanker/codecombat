@@ -19,11 +19,11 @@ block modal-body-content
           label
             input#level-version-is-major(name="version-is-major", type="checkbox")
             span(data-i18n="versions.new_major_version") New Major Version
-      //if !level.isPublished()
-        //.checkbox
-          //label
-            //input#level-publish(name="publish", type="checkbox")
-            //span(data-i18n="common.publish") Publish
+      if !level.isPublished()
+        .checkbox
+          label
+            input#level-publish(name="publish", type="checkbox")
+            span(data-i18n="common.publish") Publish
 
   if modifiedComponents.length
     hr
