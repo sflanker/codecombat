@@ -1,0 +1,30 @@
+run.config:
+  # fs watch allows nodemon to work in the dev environment
+  fs_watch: true
+  engine: nodejs
+  engine.config:
+    python_version: python-2.7
+    runtime: nodejs-6
+  cache_dirs:
+    - node_modules
+    - bower_components
+  extra_path_dirs:
+    - node_modules/.bin
+  # include the mongo tools to be able to do mongo dump and restore as needed
+  extra_packages:
+    - mongodb34-tools-3.4.13
+  # we use these extra steps instead of npm postinstall because of the yarn settings
+  extra_steps:
+    - yarn config set ignore-engines true
+    - npm install
+    #- bower --config.analytics=false install
+    #- webpack
+
+# add a mongo database
+data.db:
+  image: nanobox/mongodb:3.4
+
+# add a web component and give it a "start" command
+web.main:
+  start:
+    node: npm start
