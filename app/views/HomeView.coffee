@@ -126,12 +126,12 @@ module.exports = class HomeView extends RootView
       window.tracker?.trackEvent "Link: #{anchorText}", category: 'Homepage', ['Google Analytics']
 
   afterRender: ->
-    require.ensure(['@vimeo/player'], (require) =>
+    ### require.ensure(['@vimeo/player'], (require) =>
       Player = require('@vimeo/player').default
       @vimeoPlayer = new Player(@$('.vimeo-player')[0])
     , (e) =>
       console.log e
-    , 'vimeo')
+    , 'vimeo') ###
     @onChangeSchoolLevelDropdown()
     @$('#screenshot-lightbox')
       .modal()
