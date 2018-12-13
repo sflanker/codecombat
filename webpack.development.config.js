@@ -20,7 +20,7 @@ module.exports = (env) => {
         banner: "hash:[hash], chunkhash:[chunkhash], name:[name], filebase:[filebase], query:[query], file:[file]"
       }),
       new LiveReloadPlugin({ // Reload the page upon rebuild
-        appendScriptTag: true,
+        appendScriptTag: false,
       }),
     ])
   })
