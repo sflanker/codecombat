@@ -1,11 +1,11 @@
 module.exports = nativeDescription: "ʻŌlelo Hawaiʻi", englishDescription: "Hawaiian", translation:
-#  new_home:
-#    slogan: "The most engaging way to learn real code."
-#    classroom_edition: "Classroom Edition:"
+  new_home:
+    slogan: "ʻO ka pāʻaniʻoi loa e aʻo ai."
+    classroom_edition: "Ke kula:"
 #    learn_to_code: "Learn to code:"
 #    play_now: "Play Now"
-#    im_a_teacher: "I'm a Teacher"
-#    im_a_student: "I'm a Student"
+    im_a_teacher: "He kumu wau"
+    im_a_student: "He haumāna wau"
 #    learn_more: "Learn more"
 #    classroom_in_a_box: "A classroom in-a-box for teaching computer science."
 #    codecombat_is: "CodeCombat is a platform <strong>for students</strong> to learn computer science while playing through a real game."
@@ -49,7 +49,7 @@ module.exports = nativeDescription: "ʻŌlelo Hawaiʻi", englishDescription: "Ha
 #    request_demo: "Request a Demo"
 #    setup_a_class: "Set Up a Class"
 #    have_an_account: "Have an account?"
-#    logged_in_as: "You are currently logged in as"
+    logged_in_as: "Hanaʻiaʻoe i kēia manawa"
 #    computer_science: "Our self-paced courses cover basic syntax to advanced concepts"
 #    ffa: "Free for all students"
 #    coming_soon: "More coming soon!"
@@ -58,26 +58,31 @@ module.exports = nativeDescription: "ʻŌlelo Hawaiʻi", englishDescription: "Ha
 #    winning: "A winning combination of RPG gameplay and programming homework that pulls off making kid-friendly education legitimately enjoyable."
 #    run_class: "Everything you need to run a computer science class in your school today, no CS background required."
 #    goto_classes: "Go to My Classes"
-#    view_profile: "View My Profile"
+    view_profile: "E nānā i koʻu Profile"
 #    view_progress: "View Progress"
 #    go_to_courses: "Go to My Courses"
 #    want_coco: "Want CodeCombat at your school?"
 
-#  nav:
-#    map: "Map"
-#    play: "Levels" # The top nav bar entry where players choose which levels to play
+  nav:
+    map: "Palapala'āina"
+    play: "Pāʻani" # The top nav bar entry where players choose which levels to play
 #    community: "Community"
 #    courses: "Courses"
 #    blog: "Blog"
-#    forum: "Forum"
-#    account: "Account"
-#    my_account: "My Account"
-#    profile: "Profile"
-#    home: "Home"
+    forum: "Kūlana"
+    account: "Pūnaewele"
+    my_account: "ʻO kaʻu moʻokāki"
+    profile: "Profile"
+    home: "ʻaoʻao mua"
 #    contribute: "Contribute"
 #    legal: "Legal"
+<<<<<<< 001bf6c68ec09881ccf537ec7f20e4e954d7ed22
 #    privacy: "Privacy Notice"
 #    about: "About"
+=======
+#    privacy: "Privacy"
+    about: "E pili ana iā mākou"
+>>>>>>> Add Google Translated Hawaiian version for testing
 #    contact: "Contact"
 #    twitter_follow: "Follow"
 #    my_classrooms: "My Classes"
@@ -116,7 +121,7 @@ module.exports = nativeDescription: "ʻŌlelo Hawaiʻi", englishDescription: "Ha
 #    learn_more: "Learn more about being a Diplomat"
 #    subscribe_as_diplomat: "Subscribe as a Diplomat"
 
-#  play:
+  play:
 #    play_as: "Play As" # Ladder page
 #    get_course_for_class: "Assign Game Development and more to your classes!"
 #    request_licenses: "Contact our school specialists for details."
@@ -128,22 +133,22 @@ module.exports = nativeDescription: "ʻŌlelo Hawaiʻi", englishDescription: "Ha
 #    unlock: "Unlock" # For purchasing items and heroes
 #    confirm: "Confirm"
 #    owned: "Owned" # For items you own
-#    locked: "Locked"
-#    available: "Available"
-#    skills_granted: "Skills Granted" # Property documentation details
+    locked: "Kuʻeʻia"
+    available: "Loaʻa"
+    skills_granted: "Hāʻawiʻia nāʻike" # Property documentation details
 #    heroes: "Heroes" # Tooltip on hero shop button from /play
 #    achievements: "Achievements" # Tooltip on achievement list button from /play
 #    settings: "Settings" # Tooltip on settings button from /play
-#    poll: "Poll" # Tooltip on poll button from /play
-#    next: "Next" # Go from choose hero to choose inventory before playing a level
-#    change_hero: "Change Hero" # Go back from choose inventory to choose hero
+    poll: "Ehia ou makahiki?" # Tooltip on poll button from /play
+    next: "Holomua" # Go from choose hero to choose inventory before playing a level
+    change_hero: "Ke hoʻololi" # Go back from choose inventory to choose hero
 #    buy_gems: "Buy Gems"
 #    subscribers_only: "Subscribers Only!"
 #    subscribe_unlock: "Subscribe to Unlock!"
 #    subscriber_heroes: "Subscribe today to immediately unlock Amara, Hushbaum, and Hattori!"
 #    subscriber_gems: "Subscribe today to purchase this hero with gems!"
 #    anonymous: "Anonymous Player"
-#    level_difficulty: "Difficulty: "
+    level_difficulty: "Pākeʻi: "
 #    awaiting_levels_adventurer_prefix: "We release new levels every week."
 #    awaiting_levels_adventurer: "Sign up as an Adventurer"
 #    awaiting_levels_adventurer_suffix: "to be the first to play new levels."
@@ -157,7 +162,7 @@ module.exports = nativeDescription: "ʻŌlelo Hawaiʻi", englishDescription: "Ha
 #    teacher_button: "For Teachers"
 #    get_more_codecombat: "Get More CodeCombat"
 
-#  code:
+  code:
 #    if: "if" # Keywords--these translations show up on hover, so please translate them all, even if it's kind of long. (In the code editor, they will still be in English.)
 #    else: "else"
 #    elif: "else if"
@@ -165,7 +170,7 @@ module.exports = nativeDescription: "ʻŌlelo Hawaiʻi", englishDescription: "Ha
 #    loop: "loop"
 #    for: "for"
 #    break: "break"
-#    continue: "continue"
+    continue: "hoʻomau"
 #    pass: "pass"
 #    return: "return"
 #    then: "then"
@@ -215,17 +220,17 @@ module.exports = nativeDescription: "ʻŌlelo Hawaiʻi", englishDescription: "Ha
 #    placeholder: "email address"
 #    title: "Excellent Work, Apprentice"
 
-#  login:
-#    sign_up: "Create Account"
+  login:
+    sign_up: "Hana i kahi moʻokāki"
 #    email_or_username: "Email or username"
-#    log_in: "Log In"
-#    logging_in: "Logging In"
-#    log_out: "Log Out"
+    log_in: "E komo i loko"
+    logging_in: "Aneane kokoke"
+    log_out: "Lele"
 #    forgot_password: "Forgot your password?"
-#    finishing: "Finishing"
+    finishing: "Finishing"
 #    sign_in_with_facebook: "Sign in with Facebook"
-#    sign_in_with_gplus: "Sign in with Google"
-#    signup_switch: "Want to create an account?"
+    sign_in_with_gplus: "E hoʻopaʻa i loko me Google"
+    signup_switch: "Makemakeʻoe e hana i kahi moʻokāki?"
 
 #  signup:
 #    complete_subscription: "Complete Subscription"
@@ -321,11 +326,11 @@ module.exports = nativeDescription: "ʻŌlelo Hawaiʻi", englishDescription: "Ha
 #    misc: "Misc"
 #    books: "Books"
 
-#  common:
+  common:
 #    back: "Back" # When used as an action verb, like "Navigate backward"
 #    coming_soon: "Coming soon!"
-#    continue: "Continue" # When used as an action verb, like "Continue forward"
-#    next: "Next"
+    continue: "E hoʻomau" # When used as an action verb, like "Continue forward"
+    next: "Holomua"
 #    default_code: "Default Code"
 #    loading: "Loading..."
 #    overview: "Overview"
@@ -342,7 +347,7 @@ module.exports = nativeDescription: "ʻŌlelo Hawaiʻi", englishDescription: "Ha
 #    publish: "Publish"
 #    create: "Create"
 #    fork: "Fork"
-#    play: "Play" # When used as an action verb, like "Play next level"
+    play: "Pāʻani" # When used as an action verb, like "Play next level"
 #    retry: "Retry"
 #    actions: "Actions"
 #    info: "Info"
@@ -354,7 +359,7 @@ module.exports = nativeDescription: "ʻŌlelo Hawaiʻi", englishDescription: "Ha
 #    save_changes: "Save Changes"
 #    required_field: "required"
 
-#  general:
+  general:
 #    and: "and"
 #    name: "Name"
 #    date: "Date"
@@ -392,16 +397,16 @@ module.exports = nativeDescription: "ʻŌlelo Hawaiʻi", englishDescription: "Ha
 #    when: "When"
 #    opponent: "Opponent"
 #    rank: "Rank"
-#    score: "Score"
+    score: "Wae"
 #    win: "Win"
 #    loss: "Loss"
 #    tie: "Tie"
-#    easy: "Easy"
+    easy: "'Alahi"
 #    medium: "Medium"
 #    hard: "Hard"
 #    player: "Player"
-#    player_level: "Level" # Like player level 5, not like level: Dungeons of Kithgard
-#    warrior: "Warrior"
+    player_level: "Taumata" # Like player level 5, not like level: Dungeons of Kithgard
+    warrior: "Koa"
 #    ranger: "Ranger"
 #    wizard: "Wizard"
 #    first_name: "First Name"
@@ -432,7 +437,7 @@ module.exports = nativeDescription: "ʻŌlelo Hawaiʻi", englishDescription: "Ha
 #    year: "year"
 #    years: "years"
 
-#  play_level:
+  play_level:
 #    back_to_map: "Back to Map"
 #    directions: "Directions"
 #    edit_level: "Edit Level"
@@ -440,10 +445,10 @@ module.exports = nativeDescription: "ʻŌlelo Hawaiʻi", englishDescription: "Ha
 #    explore_codecombat: "Explore CodeCombat"
 #    finished_hoc: "I'm finished with my Hour of Code"
 #    get_certificate: "Get your certificate!"
-#    level_complete: "Level Complete"
-#    completed_level: "Completed Level:"
+    level_complete: "Hoʻopiha"
+    completed_level: "Ua hoʻopau:"
 #    course: "Course:"
-#    done: "Done"
+    done: "Pau"
 #    next_level: "Next Level"
 #    combo_challenge: "Combo Challenge"
 #    concept_challenge: "Concept Challenge"
@@ -460,15 +465,15 @@ module.exports = nativeDescription: "ʻŌlelo Hawaiʻi", englishDescription: "Ha
 #    start_challenge: "Start Challenge"
 #    next_game: "Next game"
 #    languages: "Languages"
-#    programming_language: "Programming language"
+    programming_language: "'Ōlelo hoʻolālā"
 #    show_menu: "Show game menu"
 #    home: "Home" # Not used any more, will be removed soon.
 #    level: "Level" # Like "Level: Dungeons of Kithgard"
 #    skip: "Skip"
-#    game_menu: "Game Menu"
-#    restart: "Restart"
-#    goals: "Goals"
-#    goal: "Goal"
+    game_menu: "Nā koho koho"
+    restart: "E hoʻomaka hou"
+    goals: "Nā pahuhopu"
+    goal: "Holomua"
 #    challenge_level_goals: "Challenge Level Goals"
 #    challenge_level_goal: "Challenge Level Goal"
 #    concept_challenge_goals: "Concept Challenge Goals"
@@ -476,8 +481,8 @@ module.exports = nativeDescription: "ʻŌlelo Hawaiʻi", englishDescription: "Ha
 #    concept_challenge_goal: "Concept Challenge Goal"
 #    combo_challenge_goal: "Challenge Level Goal"
 #    running: "Running..."
-#    success: "Success!"
-#    incomplete: "Incomplete"
+    success: "Maikaʻi!"
+    incomplete: "ʻAʻole i hana"
 #    timed_out: "Ran out of time"
 #    failing: "Failing"
 #    reload: "Reload"
@@ -485,7 +490,7 @@ module.exports = nativeDescription: "ʻŌlelo Hawaiʻi", englishDescription: "Ha
 #    reload_really: "Are you sure you want to reload this level back to the beginning?"
 #    reload_confirm: "Reload All"
 #    test_level: "Test Level"
-#    victory: "Victory"
+    victory: "Lanakila"
 #    victory_title_prefix: ""
 #    victory_title_suffix: " Complete"
 #    victory_sign_up: "Sign Up to Save Progress"
@@ -498,26 +503,26 @@ module.exports = nativeDescription: "ʻŌlelo Hawaiʻi", englishDescription: "Ha
 #    victory_review_placeholder: "How was the level?"
 #    victory_hour_of_code_done: "Are You Done?"
 #    victory_hour_of_code_done_yes: "Yes, I'm finished with my Hour of Code™!"
-#    victory_experience_gained: "XP Gained"
-#    victory_gems_gained: "Gems Gained"
+    victory_experience_gained: "ʻike"
+    victory_gems_gained: "Dala i loaʻa"
 #    victory_new_item: "New Item"
 #    victory_new_hero: "New Hero"
 #    victory_viking_code_school: "Holy smokes, that was a hard level you just beat! If you aren't already a software developer, you should be. You just got fast-tracked for acceptance with Viking Code School, where you can take your skills to the next level and become a professional web developer in 14 weeks."
 #    victory_become_a_viking: "Become a Viking"
 #    victory_no_progress_for_teachers: "Progress is not saved for teachers. But, you can add a student account to your classroom for yourself."
-#    tome_cast_button_run: "Run"
+    tome_cast_button_run: "Hele"
 #    tome_cast_button_running: "Running"
 #    tome_cast_button_ran: "Ran"
 #    tome_submit_button: "Submit"
 #    tome_reload_method: "Reload original code to restart the level"
 #    tome_available_spells: "Available Spells"
 #    tome_your_skills: "Your Skills"
-#    hints: "Hints"
+    hints: "Kōkua"
 #    hints_title: "Hint {{number}}"
 #    code_saved: "Code Saved"
 #    skip_tutorial: "Skip (esc)"
 #    keyboard_shortcuts: "Key Shortcuts"
-#    loading_start: "Start Level"
+    loading_start: "E hoʻomaka"
 #    loading_start_combo: "Start Combo Challenge"
 #    loading_start_concept: "Start Concept Challenge"
 #    problem_alert_title: "Fix Your Code"
@@ -607,8 +612,8 @@ module.exports = nativeDescription: "ʻŌlelo Hawaiʻi", englishDescription: "Ha
 #    project_published_noty: "Your level has been published!"
 #    keep_editing: "Keep Editing"
 
-#  apis:
-#    methods: "Methods"
+  apis:
+    methods: "Hana"
 #    events: "Events"
 #    spawnable: "Spawnable"
 #    html: "HTML"
@@ -650,8 +655,8 @@ module.exports = nativeDescription: "ʻŌlelo Hawaiʻi", englishDescription: "Ha
 #    goal_collect: "Collect all the items."
 #    goal_collect_amount: "Collect __amount__ items."
 
-#  game_menu:
-#    inventory_tab: "Inventory"
+  game_menu:
+    inventory_tab: "Kākoʻo"
 #    save_load_tab: "Save/Load"
 #    options_tab: "Options"
 #    guide_tab: "Guide"
@@ -666,9 +671,9 @@ module.exports = nativeDescription: "ʻŌlelo Hawaiʻi", englishDescription: "Ha
 #    multiplayer_caption: "Play with friends!"
 #    auth_caption: "Save your progress."
 
-#  leaderboard:
-#    view_other_solutions: "View Leaderboards"
-#    scores: "Scores"
+  leaderboard:
+    view_other_solutions: "E nānā i nā pane"
+    scores: "Nui"
 #    top_players: "Top Players by"
 #    day: "Today"
 #    week: "This Week"
@@ -677,24 +682,24 @@ module.exports = nativeDescription: "ʻŌlelo Hawaiʻi", englishDescription: "Ha
 #    time: "Win Time"
 #    damage_taken: "Damage Taken"
 #    damage_dealt: "Damage Dealt"
-#    difficulty: "Difficulty"
+    difficulty: "Pākeʻi"
 #    gold_collected: "Gold Collected"
 #    survival_time: "Survived"
 #    defeated: "Enemies Defeated"
 #    code_length: "Lines of Code"
 #    score_display: "__scoreType__: __score__"
 
-#  inventory:
-#    equipped_item: "Equipped"
-#    required_purchase_title: "Required"
-#    available_item: "Available"
-#    restricted_title: "Restricted"
-#    should_equip: "(double-click to equip)"
-#    equipped: "(equipped)"
-#    locked: "(locked)"
+  inventory:
+    equipped_item: "Ua hoʻolakoʻia"
+    required_purchase_title: "Ehia"
+    available_item: "Loaʻa"
+    restricted_title: "Pauʻia"
+    should_equip: "(pālua pālua e hoʻolako)"
+    equipped: "(i hoʻomākaukauʻia)"
+    locked: "(i hoʻopaʻaʻia)"
 #    restricted: "(restricted in this level)"
-#    equip: "Equip"
-#    unequip: "Unequip"
+    equip: "ʻaʻahu"
+    unequip: "Wehe"
 #    warrior_only: "Warrior Only"
 #    ranger_only: "Ranger Only"
 #    wizard_only: "Wizard Only"
@@ -719,14 +724,14 @@ module.exports = nativeDescription: "ʻŌlelo Hawaiʻi", englishDescription: "Ha
 #    prompt_title: "Not Enough Gems"
 #    prompt_body: "Keep playing to earn more!"
 
-#  subscribe:
+  subscribe:
 #    best_deal: "Best Deal!"
 #    confirmation: "Congratulations! You now have a CodeCombat Premium Subscription!"
 #    premium_already_subscribed: "You're already subscribed to Premium!"
 #    subscribe_modal_title: "CodeCombat Premium"
 #    comparison_blurb: "Become a Master Coder - subscribe to <b>Premium</b> today!"
 #    must_be_logged: "You must be logged in first. Please create an account or log in from the menu above."
-#    subscribe_title: "Subscribe" # Actually used in subscribe buttons, too
+    subscribe_title: "Hoʻoka inoa" # Actually used in subscribe buttons, too
 #    unsubscribe: "Unsubscribe"
 #    confirm_unsubscribe: "Confirm Unsubscribe"
 #    never_mind: "Never Mind, I Still Love You"
@@ -830,11 +835,11 @@ module.exports = nativeDescription: "ʻŌlelo Hawaiʻi", englishDescription: "Ha
 #    list_support: "Get Premium support to help you debug tricky code"
 #    list_clans: "Create private clans to invite your friends and compete on a group leaderboard"
 
-#  choose_hero:
-#    choose_hero: "Choose Your Hero"
-#    programming_language: "Programming Language"
-#    programming_language_description: "Which programming language do you want to use?"
-#    default: "Default"
+  choose_hero:
+    choose_hero: "Koho i kou ano"
+    programming_language: "'Ōlelo hoʻolālā"
+    programming_language_description: "ʻO ka'ōlelo hoʻolālā āu e makemake nei e hoʻohana?"
+    default: "Paʻi"
 #    experimental: "Experimental"
 #    python_blurb: "Simple yet powerful, great for beginners and experts."
 #    javascript_blurb: "The language of the web. (Not the same as Java.)"
@@ -842,13 +847,13 @@ module.exports = nativeDescription: "ʻŌlelo Hawaiʻi", englishDescription: "Ha
 #    lua_blurb: "Game scripting language."
 #    java_blurb: "(Subscriber Only) Android and enterprise."
 #    status: "Status"
-#    weapons: "Weapons"
-#    weapons_warrior: "Swords - Short Range, No Magic"
+    weapons: "Nā mea kaua"
+    weapons_warrior: "ʻO nā pahi"
 #    weapons_ranger: "Crossbows, Guns - Long Range, No Magic"
 #    weapons_wizard: "Wands, Staffs - Long Range, Magic"
-#    attack: "Damage" # Can also translate as "Attack"
-#    health: "Health"
-#    speed: "Speed"
+    attack: "Kū'ē" # Can also translate as "Attack"
+    health: "ʻO ka maʻi"
+    speed: "ʻO ka wikiwiki"
 #    regeneration: "Regeneration"
 #    range: "Range" # As in "attack or visual range"
 #    blocks: "Blocks" # As in "this shield blocks this much damage"
@@ -1166,11 +1171,11 @@ module.exports = nativeDescription: "ʻŌlelo Hawaiʻi", englishDescription: "Ha
 #    password_mismatch: "Password does not match."
 #    password_repeat: "Please repeat your password."
 
-#  keyboard_shortcuts:
+  keyboard_shortcuts:
 #    keyboard_shortcuts: "Keyboard Shortcuts"
 #    space: "Space"
 #    enter: "Enter"
-#    press_enter: "press enter"
+    press_enter: "kaomi enter"
 #    escape: "Escape"
 #    shift: "Shift"
 #    run_code: "Run current code."
@@ -1265,7 +1270,7 @@ module.exports = nativeDescription: "ʻŌlelo Hawaiʻi", englishDescription: "Ha
 #    track_concepts8: "to join"
 #    private_require_sub: "Private clans require a subscription to create or join."
 
-#  courses:
+  courses:
 #    create_new_class: "Create New Class"
 #    solutions_require_licenses: "Level solutions are available for teachers who have licenses."
 #    unnamed_class: "Unnamed Class"
@@ -1333,8 +1338,8 @@ module.exports = nativeDescription: "ʻŌlelo Hawaiʻi", englishDescription: "Ha
 #    view_project: "View Project"
 #    start: "Start"
 #    last_level: "Last level played"
-#    not_you: "Not you?"
-#    continue_playing: "Continue Playing"
+    not_you: "'Aʻole' oe?"
+    continue_playing: "E hoʻomau i ka pāʻani"
 #    option1_header: "Invite Students by Email"
 #    remove_student1: "Remove Student"
 #    are_you_sure: "Are you sure you want to remove this student from this class?"
@@ -1439,7 +1444,7 @@ module.exports = nativeDescription: "ʻŌlelo Hawaiʻi", englishDescription: "Ha
 #    view_project: "View Project"
 #    edit_project: "Edit Project"
 
-#  teacher:
+  teacher:
 #    assigning_course: "Assigning course"
 #    back_to_top: "Back to Top"
 #    click_student_code: "Click on any level that the student has started or completed below to view the code they wrote."
@@ -1743,7 +1748,7 @@ module.exports = nativeDescription: "ʻŌlelo Hawaiʻi", englishDescription: "Ha
 #    office_hours_detail: "Learn how to keep up with with your students as they create games and embark on their coding journey! Come and attend our"
 #    office_hours_link: "teacher webinar"
 #    office_hours_detail_2: "sessions."
-#    success: "Success"
+    success: "Maikaʻi"
 #    in_progress: "In Progress"
 #    not_started: "Not Started"
 #    mid_course: "Mid-Course"
@@ -1833,7 +1838,7 @@ module.exports = nativeDescription: "ʻŌlelo Hawaiʻi", englishDescription: "Ha
 #    ambassador_summary: "Tame our forum users and provide direction for those with questions. Our ambassadors represent CodeCombat to the world."
 #    teacher_title: "Teacher"
 
-#  editor:
+  editor:
 #    main_title: "CodeCombat Editors"
 #    article_title: "Article Editor"
 #    thang_title: "Thang Editor"
@@ -1886,7 +1891,7 @@ module.exports = nativeDescription: "ʻŌlelo Hawaiʻi", englishDescription: "Ha
 #    level_systems_btn_new: "Create New System"
 #    level_systems_btn_add: "Add System"
 #    level_components_title: "Back to All Thangs"
-#    level_components_type: "Type"
+    level_components_type: "ʻAno"
 #    level_component_edit_title: "Edit Component"
 #    level_component_config_schema: "Config Schema"
 #    level_system_edit_title: "Edit System"
