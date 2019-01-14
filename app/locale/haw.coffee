@@ -2199,7 +2199,7 @@ module.exports = nativeDescription: "ʻŌlelo Hawaiʻi", englishDescription: "Ha
 #    hero: "Hero"
 #    campaigns: "Campaigns"
 
-#  concepts:
+  concepts:
 #    advanced_css_rules: "Advanced CSS Rules"
 #    advanced_css_selectors: "Advanced CSS Selectors"
 #    advanced_html_attributes: "Advanced HTML Attributes"
@@ -2223,7 +2223,7 @@ module.exports = nativeDescription: "ʻŌlelo Hawaiʻi", englishDescription: "Ha
 #    basic_css_selectors: "Basic CSS selectors"
 #    basic_html_attributes: "Basic HTML Attributes"
 #    basic_html_tags: "Basic HTML Tags"
-#    basic_syntax: "Basic Syntax"
+    basic_syntax: "nā kumuhana o ka hoʻolālā"
 #    binary: "Binary"
 #    boolean_and: "Boolean And"
 #    boolean_inequality: "Boolean Inequality"
