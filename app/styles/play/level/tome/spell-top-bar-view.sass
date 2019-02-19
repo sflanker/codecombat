@@ -2,7 +2,7 @@
 @import "app/styles/bootstrap/variables"
 
 #spell-top-bar-view
-  $height: 87px
+  $height: 50px
   $paddingTop: 10px
   $paddingBottom: 25px
   $childSize: $height - $paddingTop - $paddingBottom
@@ -11,9 +11,11 @@
   padding: $paddingTop 25px $paddingBottom 25px
   white-space: nowrap
   position: relative
-  background: transparent url(/images/level/code_editor_top_bar_wood_background.png)
+  background: transparent
   background-size: 100% 100%
   z-index: 2
+  background-image: linear-gradient(-84deg, #43458E 100%, #6C6DA9 4%)
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.08);
 
   #codeplay-powered-by-banner
     width: 350px
@@ -24,7 +26,7 @@
   .hinge
     position: absolute
     top: 0
-    background: transparent url(/images/level/code_editor_top_bar_hinge.png)
+    background: transparent
     width: 24px
     height: 20px
     background-size: contain
@@ -39,22 +41,22 @@
     left: 80%
 
   &.read-only
-    background: linear-gradient(to bottom, rgba(0,0,0,0.25) 0%,rgba(0,0,0,0.25) 100%), url(/images/level/code_editor_top_bar_wood_background.png)
+    background: linear-gradient(to bottom, rgba(0,0,0,0.25) 0%,rgba(0,0,0,0.25) 100%)
     background-size: 100% 100%
     > *:not(.spell-tool-buttons)
       @include opacity(0.5)
-  
+
   .btn.btn-small
     margin-top: 15px
     margin-right: 0.8vw
     font-size: 18px
-    
+
     &.reload-code
       margin-right: 1.3vw
 
     .glyphicon
       font-size: 16px
-    
+
   .btn.btn-small.spell-list-button
     float: left
     margin-top: 5px
@@ -84,22 +86,24 @@
   .hints-button
     float: right
     border-style: solid
-    border-image: url(/images/common/button-background-primary-active.png) 14 20 20 20 fill round
-    border-width: 7px 10px 10px 10px
-    color: white
+    background: #DAD7F8
+    border-image: none
+    color: #6C6DA9
     &:hover, &:active
-      border-image: url(/images/common/button-background-primary-pressed.png) 14 20 20 20 fill round
+      background: #6C6DA9
+      color: #fff
+      border-color: transparent
 
   .thang-avatar-wrapper
     border-width: 0
-    
+
   #amazon-level-logo
     height: 60px
     position: absolute
     top: 10px
     left: 30px
 
-//html.no-borderimage 
+//html.no-borderimage
 //  .spell-top-bar-view
 //    border-width: 0
 //    border-image: none

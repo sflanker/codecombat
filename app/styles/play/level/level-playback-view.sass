@@ -11,7 +11,7 @@
   height: 60px
   padding-top: 17px
   position: relative
-  background: transparent url(/images/level/scrubber_background.png)
+  background: transparent
   background-size: 100% 100%
   // Counteract 50px height of absolutely positioned control bar, but overlap by 10px of jagged transparent top.
   margin-top: 50px - 10px
@@ -27,7 +27,6 @@
     background: transparent
     @include opacity(0.75)
     color: $playback-button-color
-    text-shadow: 1px 1px 0px black
 
     .glyphicon
       position: relative
@@ -38,7 +37,7 @@
   #play-button, #volume-button, #music-button
     float: left
     position: relative
-    
+
   #music-button
     @include opacity(0.5)
     span
@@ -51,11 +50,11 @@
       @include opacity(0.75)
       &:hover
         @include opacity(1)
-    
+
   #play-button, #volume-button
     .glyphicon
       display: none
- 
+
   #settings-button
     padding-left: 4px
     padding-right: 4px
