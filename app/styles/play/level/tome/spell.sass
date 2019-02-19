@@ -15,6 +15,7 @@
   display: none
   position: relative
   z-index: 1
+  border-image: none 
 
   &.shown
     display: block
@@ -29,7 +30,7 @@
 
   span.code-background
     border-width: 115px 76px 64px 40px
-    border-image: url(/images/level/code_editor_background_border.png) 124 76 64 40 fill stretch
+    background: #fff;
 
   img.code-background
     display: none
@@ -96,11 +97,11 @@
       //background-color: rgba(255, 255, 255, 0.25)
       width: 47px
       margin-left: 4px
-      
+
     // override ace visible to get the experimental large current line executing arrow visible
     .ace_gutter
       overflow: visible
-      
+
     .ace_layer
       overflow: visible
     // End experiment....
@@ -233,7 +234,7 @@
       background-color: rgba(216, 187, 165, 1)
       border: 0
       @include box-shadow(1px 2px 1px #444)
-      
+
       .ace_search_field
         width: 190px
 

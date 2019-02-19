@@ -26,12 +26,11 @@
 #cast-button-view
   display: none
   position: absolute
-
+  color:#fff
   z-index: 2
   width: 100%
   border-radius: 6px
-
-  background: transparent url(/images/level/code_toolbar_background.png)
+  background: #24225C
   background-size: 100% 100%
   left: -15px
   right: 15px
@@ -47,19 +46,18 @@
     width: -webkit-calc(50% - 10px)
     width: calc(50% - 10px)
     border-style: solid
-    border-image: url(/images/level/code_toolbar_run_button_active.png) 14 20 20 20 fill round
-    border-width: 7px 10px 10px 10px
+    border-image: none
 
     &:active
-      border-image: url(/images/level/code_toolbar_run_button_active_pressed.png) 14 20 20 20 fill round
+      background: #24225C
       padding: 2px 0 0 2px
 
     &.submit-button, &.done-button, &.rank-button
       margin-left: 10px
-      border-image: url(/images/level/code_toolbar_submit_button_active.png) 14 20 20 20 fill round
-      
+      background: #F5A623
+
       &:active
-        border-image: url(/images/level/code_toolbar_submit_button_active_pressed.png) 14 20 20 20 fill round
+        background: #F5A623
 
   .ladder-submission-view
     width: 45%
@@ -71,16 +69,16 @@
       width: 100%
       font-size: 18px
 
-  
+
   .cast-button
     @include opacity(0.77)
-  
+
     &:hover, &.castable
       @include opacity(1)
 
   .submit-button > *, .done-button > *
     @include opacity(0.9)
-  
+
     &:hover
       @include opacity(1)
 
@@ -121,7 +119,7 @@ html.no-borderimage #cast-button-view
     background-image: url(/images/level/code_toolbar_run_button_active.png)
     background-size: 100% 100%
     padding: 7px 10px 10px 10px
-  
+
     &:active
       background-image: url(/images/level/code_toolbar_run_button_active_pressed.png)
       padding: 9px 8px 8px 12px
@@ -153,4 +151,3 @@ html.no-borderimage #cast-button-view
         &:active
           border: 0
           background-image: url(/images/level/code_toolbar_submit_button_zazz_pressed.png)
-          

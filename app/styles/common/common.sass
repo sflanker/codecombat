@@ -32,17 +32,17 @@ iframe
     @include box-shadow(0 0 0 #000)
     //position: absolute
     width: 99%
-    
+
   .background-wrapper.plain
     background: white
-    
+
   .plain
     h1, h2, h3, h4, h5, h6
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important
 
   .modal-content
     @include box-shadow(none)
-  
+
   .modal-header
     margin: 0 14px
     padding: 8px 0
@@ -68,7 +68,7 @@ iframe
       padding-bottom: 10px
   .login-link
     cursor: pointer
-      
+
 
 // loading screens for everything but the play view
 .loading-screen
@@ -76,7 +76,7 @@ iframe
     width: 50%
     margin: 0 25%
   margin-bottom: 20px
-    
+
 // all loading screens
 .loading-container
   text-align: center
@@ -107,7 +107,7 @@ table.table
 
 //.ui-autocomplete
 //  z-index: $zindexAutocomplete
-  
+
 .ui-slider
   border: 1px solid black
 .ui-slider-handle
@@ -154,25 +154,25 @@ body[lang='ja']
       li
         a.header-font
           font-size: 16px
-   
+
 @media only screen and (max-width: 800px)
   .main-content-area
     width: 100%
   .content
     width: 100%
-    
+
   .footer-link-text a
     font-size: 17px
     margin-left: 3px
     margin-right: 3px
-    
+
   .share-buttons
     margin-bottom: 20px
   .partner-badges
     display: none
 
 // point the new glyphicons to the fonts in public
-  
+
 @font-face
   font-family: 'Glyphicons Halflings'
   src: url("/fonts/glyphicons-halflings-regular.eot")
@@ -244,29 +244,30 @@ kbd
   border-radius: 0
   @include box-shadow(none)
   border-style: solid
-  border-image: url(/images/common/button-background-active-border.png) 14 20 20 20 fill round
-  border-width: 7px 10px 10px 10px
-  padding: 0
+  border-image: none
+  padding: 7px 10px 10px 10px
+  border-width: 0
   font-family: $headings-font-family
   text-transform: uppercase
   font-weight: bold
   color: rgb(248, 197, 146)
 
   &.btn-lg
-    border-width: 14px 20px 20px 20px
+    padding: 12px 20px 20px 20px
     height: 60px
     line-height: 34px
 
   &.btn-primary
-    border-image-source: url(/images/common/button-background-primary-active-border.png)
+    background: #24225C
   &.btn-success
-    border-image-source: url(/images/common/button-background-success-active-border.png)
+    background: #9be52a
     color: darken(white, 5%)
   &.btn-warning
-    border-image-source: url(/images/common/button-background-warning-active-border.png)
+    background: #24225C
     color: darken(white, 5%)
   &.btn-danger
-    border-image-source: url(/images/common/button-background-danger-active-border.png)
+    background: #D0021B
+    color: darken(white, 5%)
 
   &:hover
     color: lighten(rgb(248, 197, 146), 5%)
@@ -277,33 +278,35 @@ kbd
 
   &:active
     &.btn-lg
-      border-image-source: url(/images/common/button-background-pressed-border.png)
+      background: #24225C
     &:not(.btn-lg)
-      border-image: url(/images/common/button-background-pressed-border.png) 14 16 16 20 fill round
       padding: 2px 0 0 2px
-      border-width: 7px 8px 8px 10px
+      padding: 7px 8px 8px 10px
 
     &.btn-primary
-      border-image-source: url(/images/common/button-background-primary-pressed-border.png)
+      background: #24225C
     &.btn-success
-      border-image-source: url(/images/common/button-background-success-pressed-border.png)
+      background: #9be52a
+      color: darken(white, 5%)
     &.btn-warning
-      border-image-source: url(/images/common/button-background-warning-pressed-border.png)
+      background: #24225C
+      color: darken(white, 5%)
     &.btn-danger
-      border-image-source: url(/images/common/button-background-danger-pressed-border.png)
+      background: #D0021B
+      color: darken(white, 5%)
 
   &.disabled, &:disabled
-    border-image: url(/images/common/button-background-disabled-border.png) 14 20 20 20 fill round
+    background: #C6C6C6
     @include opacity(1)
 
     &.btn-primary
-      border-image-source: url(/images/common/button-background-primary-disabled-border.png)
+
     &.btn-success
-      border-image-source: url(/images/common/button-background-success-inactive-border.png)
+
     &.btn-warning
-      border-image-source: url(/images/common/button-background-warning-disabled-border.png)
+
     &.btn-danger
-      border-image-source: url(/images/common/button-background-danger-disabled-border.png)
+
 
     > *
       @include opacity(0.5)
@@ -327,7 +330,7 @@ html.no-borderimage
     background-image: url(/images/common/button-background-active.png)
     background-size: 100% 100%
     padding: 7px 10px 10px 10px
-    
+
     &.btn-primary
       background-image: url(/images/common/button-background-primary-active.png)
     &.btn-success
@@ -378,15 +381,15 @@ body > iframe[src^="https://apis.google.com"]
   top: 0
   left: 0
   pointer-events: none
-  
+
 // TODO: update Bootstrap, remove this
 .text-uppercase
   text-transform: uppercase
-  
+
 .text-capitalize
   text-transform: capitalize
 
-  
+
 // Made for new victory modal as temp features. TODO: Replace with static art or make general, sprite versions
 .well-parchment
   border: 2px solid #14110e
@@ -397,7 +400,7 @@ body > iframe[src^="https://apis.google.com"]
   border: 4px solid #fef9a3
   padding: 2px
   background: #693415
-  
+
 .label-banner
   border: 2px solid #350f0d
   background: #e6251c

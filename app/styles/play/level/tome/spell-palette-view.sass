@@ -8,12 +8,11 @@
   width: $api-bar-width
   bottom: 0px
   top: 0px
-  padding: 0 4px 0px 10px
-  background: transparent url(/images/level/wood_texture.png)
+  padding: 0
+  background: #ADACD0
   background-size: auto 100%
   z-index: 7
   @include transition(top 0.25s ease-in-out, width 0.25s ease-in-out)
-  box-shadow: 10px 4px 4px black
   overflow: hidden
   #spell-palette-api-bar[disabled=disabled]
     pointer-events: none
@@ -34,16 +33,16 @@
       top: 80px
       bottom: 0px
       height: auto
-      width: $api-bar-width - 13
+      width: $api-bar-width
       .section-header
         display: block
         color: white
-        margin-right: 10px
+        margin-right: 0
 
       .spell-palette-thang-entry-view
         display: inline-block
         border: 5px solid black
-        border-image: url(/images/level/thang_avatar_frame.png) 20 20 20 20 fill round
+        border-image: none
         margin: 1px
 
         img
@@ -73,7 +72,7 @@
         max-height: calc(100% - 20px)
         width: 100%
         border-style: solid
-        border-image: url(/images/level/popover_border_background.png) 16 12 fill round
+        border-image: none
         border-width: 16px 12px
         margin-top: 20px
         margin-bottom: 20px
@@ -207,7 +206,7 @@
       @include flex-wrap()
       @include flex-center()
       position: relative
-      background-color: rgb(20, 13, 8)
+      background-color: transparent
       margin: 1px
 
       img.item-image

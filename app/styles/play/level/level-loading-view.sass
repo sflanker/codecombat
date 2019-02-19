@@ -48,16 +48,17 @@ $UNVEIL_TIME: 1.2s
     position: absolute
     top: 86px
     right: 50%
-    $WIDTH: 450px
+    $WIDTH: 400px
     width: $WIDTH
     height: 450px
     margin-right: (-$WIDTH / 2)
     z-index: 100
-    background: transparent url(/images/level/code_editor_background.png) no-repeat
+    background: #fff
+    border: 1px solid #DAD7F8
     background-size: 100% 100%
     color: darkslategray
     font-size: 15px
-    padding: 4% 80px 40px 80px
+    padding: 4% 55px 40px 55px
     text-align: center
     // http://matthewlein.com/ceaser/  Bounce down a bit, then snap up.
     @include transition($UNVEIL_TIME cubic-bezier(0.285, -0.595, 0.670, -0.600))
@@ -107,7 +108,7 @@ $UNVEIL_TIME: 1.2s
         max-width: 100%
 
       pre
-        box-sizing: content-box 
+        box-sizing: content-box
         border: 5px solid white
         padding: 0
         .ace_content
@@ -138,7 +139,8 @@ $UNVEIL_TIME: 1.2s
           @include box-shadow(none)
 
           .progress-background
-            width: 100%
+            width: 77%
+            margin-left: 12%
             height: 100%
             background: transparent url(/images/level/loading_bar_back.png) no-repeat
             background-size: 100% 100%
@@ -168,7 +170,7 @@ $UNVEIL_TIME: 1.2s
             top: 0
             width: 100%
             height: 100%
-            background: transparent url(/images/level/loading_bar_rim.png) no-repeat
+            background: none
             background-size: 100% 100%
 
       .start-level-button
@@ -198,15 +200,15 @@ $UNVEIL_TIME: 1.2s
       z-index: 2
       bottom: 40px
       left: 25px
-      width: 401px
+      width: 325px
       color: #666
 
     &.preview #tip-wrapper
       left: 48px
       right: 77px
       width: auto
-      
-  
+
+
 #level-view.web-dev
   #loading-details.preview
     @media screen and ( min-height: 900px )

@@ -3,9 +3,11 @@
 @import "app/styles/play/variables"
 
 #control-bar-view
-  $control-yellow: rgb(227, 173, 53)
+  $control-yellow: #fff
   $control-yellow-highlight: rgb(243, 211, 59)
 
+  background-image: linear-gradient(-84deg, #6C6DA9 4%, #43458E 100%)
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.08)
   width: $game-view-width
   height: 50px
   @include box-sizing(border-box)
@@ -52,21 +54,21 @@
     pointer-events: none
 
   .left-cap
-    background: transparent url(/images/level/control_bar_cap_left.png)
+    background: transparent
     background-size: cover
     width: 217px
     height: 63px
     left: 0
 
   .right-cap
-    background: transparent url(/images/level/control_bar_cap_right.png)
+    background: transparent
     background-size: cover
     right: 0
     width: 78px
     height: 60px
 
   .center-chain
-    background: transparent url(/images/level/control_bar_chain_center.png)
+    background: transparent
     background-size: cover
     left: 30%
     width: 111px
@@ -74,7 +76,7 @@
     z-index: 1
 
   .right-chain
-    background: transparent url(/images/level/control_bar_chain_right.png)
+    background: transparent
     background-size: cover
     top: 30px
     right: 0
@@ -83,7 +85,7 @@
     z-index: -1
 
   .wood-background
-    background: transparent url(/images/level/control_bar_background.png)
+    background: transparent
     background-size: contain
     width: 100%
     height: 55px
@@ -101,8 +103,7 @@
       margin: 0 auto
       padding: 8px
       border-style: solid
-      border-image: url(/images/level/control_bar_level_name_background.png) 20 fill round
-      border-width: 0 10px 10px 10px
+      border-width: 0
       text-align: center
       position: absolute
       left: 50%
@@ -176,6 +177,6 @@
 html.no-borderimage
   #control-bar-view .level-name-area
     border: 0
-    background: transparent url(/images/level/control_bar_level_name_background.png)
+    background: transparent
     background-size: contain
     background-repeat: no-repeat
