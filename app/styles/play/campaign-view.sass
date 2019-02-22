@@ -30,6 +30,7 @@ $gameControlMargin: 30px
   bottom: 0
   left: 0
   position: absolute
+  background: #EFEBF8 !important
 
   .gradient
     position: absolute
@@ -59,7 +60,8 @@ $gameControlMargin: 30px
 
   .map
     position: relative
-    
+    top: 50px
+
     #brain-pop-done-banner-wrapper
       position: absolute
       top: 20%
@@ -364,19 +366,19 @@ $gameControlMargin: 30px
       //min-height: 179px
       padding: 17px 20px 20px 20px
       border: 0
-      background: transparent url(/images/pages/play/level-info-background.png) no-repeat center center
+      background: #ADACD0
+      color: #fff
       background-size: 100% 100%
 
       .level-info
 
         h3
-          color: rgb(232, 217, 87)
-          text-shadow: black 2px 2px 0, black -2px -2px 0, black 2px -2px 0, black -2px 2px 0, black 2px 0px 0, black 0px -2px 0, black -2px 0px 0, black 0px 2px 0
           padding: 0 2px
-          margin: 0 0 10px 31px
+          margin: 0 0 10px 0px
           white-space: nowrap
           overflow: hidden
           text-overflow: ellipsis
+          color: #24225C
 
         .level-description
           color: black
@@ -392,7 +394,7 @@ $gameControlMargin: 30px
           font-size: 12px
 
         .level-status
-          background: transparent url(/images/pages/play/level-info-status-spritesheet.png) no-repeat 0 0
+          //background: transparent url(/images/pages/play/level-info-status-spritesheet.png) no-repeat 0 0
           width: 60px
           height: 60px
           position: absolute
@@ -442,7 +444,7 @@ $gameControlMargin: 30px
 
         .course-version
           text-align: center
-          
+
         .threshold-icon
           height: 40px
           filter: drop-shadow(2px 2px 0px #222)
@@ -678,16 +680,16 @@ $gameControlMargin: 30px
     width: 100%
     margin: 0
     text-align: center
-    color: rgb(232, 217, 87)
+    color: #24225C
     font-size: 28px
-    text-shadow: black 2px 2px 0, black -2px -2px 0, black 2px -2px 0, black -2px 2px 0, black 2px 0px 0, black 0px -2px 0, black -2px 0px 0, black 0px 2px 0
+    text-shadow: 0 0 0
     z-index: 30
     pointer-events: none
 
     .campaign-status-background
-      background: transparent url(/images/pages/play/campaign-banner.png) no-repeat center center
+      background: transparent
       border-radius: 10px
-      padding-top: 30px
+      padding-top: 15px
       display: inline-block
       min-width: 250px
       height: 106px
@@ -901,7 +903,7 @@ $gameControlMargin: 30px
   .code-ninjas-logo
     top: calc(1% + 5px)
     left: calc(1% + 200px)
-    
+
   .codeplay-logo
     top: calc(1% + 5px)
     left: calc(1% + 5px)
@@ -916,14 +918,14 @@ $gameControlMargin: 30px
     position: absolute
     height: 100%
     width: 100%
-    
+
   #codeplay-ad
     position: absolute
     right: 10px
     top: 60px
     height: calc(100% - 160px)
     z-index: 2
-    
+
   #amazon-campaign-container
     width: 200px
     position: absolute
@@ -934,7 +936,7 @@ $gameControlMargin: 30px
 
     #amazon-campaign-logo
       width: 200px
-    
+
   #game-dev-hoc-license-alert
     position: absolute
     z-index: 1

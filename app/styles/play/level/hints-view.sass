@@ -2,12 +2,12 @@
 
 .hints-view
   position: relative
-
+  background: #DAD7F8
+  border: 1px solid #ADACD0
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.08)
   width: 500px // TODO: should be in sync with surface min-width
-  padding: 10px 20px
+  padding: 26px 32px
   border-style: solid
-  border-image: url(/images/level/popover_border_background.png) 16 12 fill round
-  border-width: 16px 12px
   @include box-shadow(0 0 0 #000)
   @include user-select(initial)
 
@@ -22,9 +22,15 @@
 
   h1
     margin-bottom: 30px
+  h1, h2, h3, h4, h5
+    color: #6B6DA9
 
   .btn-area
     margin-top: 5px
+
+    .btn.btn-illustrated
+      background: #ADACD0
+      color: #6B6DA9
 
   .hint-title
     font-size: 18px
@@ -42,7 +48,7 @@
     text-transform: uppercase
 
   pre
-    box-sizing: content-box 
+    box-sizing: content-box
     padding: 0
     @include user-select(none)
     .ace_content
