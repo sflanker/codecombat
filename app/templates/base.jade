@@ -54,7 +54,7 @@ block header
                 if !features.codePlay
                   li
                     a#logout-button(data-i18n="login.log_out")
-  
+
           else
             button.btn.btn-sm.btn-primary.header-font.signup-button(data-i18n="login.sign_up")
             button.btn.btn-sm.btn-default.header-font.login-button(data-i18n="login.log_in")
@@ -70,7 +70,7 @@ block outer_content
 
 block footer
   #site-footer
-    img#footer-background(src="/images/pages/base/nav_background.png")
+    //-img#footer-background(src="/images/pages/base/nav_background.png")
 
     #footer-links(class=features.playViewsOnly ? 'hide' : '')
       a(href="/about", data-i18n="nav.about")
