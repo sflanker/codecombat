@@ -3,7 +3,7 @@
 @import "app/styles/play/variables"
 
 #playback-view
-  $playback-button-color: rgb(248, 197, 146)
+  $playback-button-color: #24225C
   // When 75% alpha, it will look like the rgb(194, 154, 114) from Heald's design
   width: calc(#{$game-view-width} -  #{$api-bar-width})
   #level-view.no-api &
@@ -67,6 +67,10 @@
       margin: 0 10px
     li:hover
       background: #add8e6
+    .btn-inverse
+      text-shadow: 0 0 0
+      border-color: transparent
+      box-shadow: 0 0 0
 
   #play-button.disabled .glyphicon
     @include opacity(0.75)
