@@ -1,23 +1,63 @@
+$dark-purple: #24225c
+
+
 #footer
   background: #6B6DA9
   background-image: none
 
   #final-footer
-    background-color: #24225C
+    background-color: $dark-purple
 
 #main-nav.navbar
 
   #navbar-collapse
-    color: #24225C
+    color: $dark-purple
 
     ul.navbar-nav
       li a
-
-      &:hover
-        background: #24225C
+        &:hover
+          background: $dark-purple
 
 
 body.is-playing
   background-color: #EFEBF8
 body
   background-color: #EFEBF8
+
+#home-view #jumbotron-container-fluid .container .well.text-center
+  display: none
+
+#home-view #jumbotron-container-fluid.alt-image
+  .container
+    h1.slogan
+      margin-top: 20vh
+      margin-bottom: 20vh
+      text-align: center
+      font-weight: bold
+    #learn-more-row
+      maring-top: 0
+
+.style-flat #main-nav.navbar a.navbar-brand:hover
+  background: transparent
+
+#auth-modal
+  .modal-dialog
+    background: #fff
+    border: 1px solid #EFEBF8
+
+    .modal-content
+      img
+        display: none
+      h1
+        color: $dark-purple
+        text-shadow: 0 0 0
+      #close-modal
+        background: $dark-purple
+      .extra-pane
+        background-image: none
+
+#level-loading-view
+  .left-wing
+    background-image: none
+  .right-wing
+    background-image: none
