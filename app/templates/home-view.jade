@@ -50,18 +50,16 @@ mixin box
 block content
   .container-fluid#jumbotron-container-fluid.alt-image
     .container
-      .row.hidden-xs.top-spacer(style="height: 160px")
       .row.hidden-sm.hidden-xs
-        .col-lg-7.col-md-8
-          h1(data-i18n="new_home.slogan")
-        .col-lg-3.col-lg-offset-2.col-md-4
-          +box
+        .col-lg-1.col-md-1
+        .col-lg-10.col-md-10
+          h1.slogan(data-i18n="new_home.slogan")
+
       .row.hidden-lg.hidden-md
-        .col-lg-7.col-md-8
-          h1(data-i18n="new_home.slogan")
-        .col
-          div(style="margin: auto; max-width: 300px")
-            +box
+        .col-lg-1.col-md-1
+        .col-lg-10.col-md-10
+          h1.slogan(data-i18n="new_home.slogan")
+
       .row#learn-more-row
         .col-xs-12.text-center
           a#learn-more-link
