@@ -141,18 +141,16 @@ mixin accountLinks
                   a(href="/editor/thang") Thang Editor
                 li
                   a(href="/editor/level") Level Editor
-            //- .col-sm-3
-            //-   ul.list-unstyled
-            //-     li
-            //-       strong(data-i18n="nav.support")
-            //-     if !me.isStudent()
-            //-       li
-            //-         a.contact-modal(tabindex=-1, data-i18n="nav.contact")
-            //-     if !me.onChinaInfra()
-            //-       li
-            //-         a(href="https://www.facebook.com/codecombat", data-i18n="nav.facebook")
-            //-       li
-            //-         a(href="https://twitter.com/codecombat", data-i18n="nav.twitter")
+                li
+                  a(href="/i18n") Translations Editor
+                //-if !me.isStudent()
+                //-  li
+                //-    a(href=view.forumLink(), data-i18n="nav.forum")
+                //-li
+                //-  a(href="/play/ladder", data-i18n="game_menu.multiplayer_tab")
+                //-li
+                //-  a(href="https://github.com/codecombat/codecombat", data-i18n="nav.open_source")
+
 
       #final-footer.small.text-center(dir="ltr")
         span(data-i18n="nav.copyright_prefix")
