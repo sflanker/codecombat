@@ -76,13 +76,8 @@ module.exports = nativeDescription: "ʻŌlelo Hawaiʻi", englishDescription: "Ha
     home: "ʻaoʻao mua"
 #    contribute: "Contribute"
 #    legal: "Legal"
-<<<<<<< 001bf6c68ec09881ccf537ec7f20e4e954d7ed22
-#    privacy: "Privacy Notice"
-#    about: "About"
-=======
 #    privacy: "Privacy"
     about: "E pili ana iā mākou"
->>>>>>> Add Google Translated Hawaiian version for testing
 #    contact: "Contact"
 #    twitter_follow: "Follow"
 #    my_classrooms: "My Classes"
