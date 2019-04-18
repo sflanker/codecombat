@@ -118,12 +118,13 @@ module.exports = Vue.extend
         if session.codeLanguage isnt defaultLanguage
           return map
         map[session.level.original] = session
+        level.complete = session.state?.complete # needed for utils.findNextAssessmentForLevel to work
         return map
       , {})
     createPlayLevelUrlMap: ->
       # Map level original to URL to play that level as the student
       _.reduce(@levels, (map, level) =>
-        if not @levelUnlockedMap[level.original]
+        unless (@levelUnlockedMap[level.original] or @sessionMap[level.original])
           return map
         course = _.find(@courses, (c) =>
           Boolean(_.find(c.levels, (l) => l.original is level.original))

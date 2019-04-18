@@ -63,9 +63,9 @@ block content
       .row#learn-more-row
         .col-xs-12.text-center
           a#learn-more-link
-            //- h6(data-i18n="new_home.learn_more")
-            //- h2
-            //-   span.glyphicon.glyphicon-chevron-down
+            //h6(data-i18n="new_home.learn_more")
+            //h2
+            //  span.glyphicon.glyphicon-chevron-down
 
   //- .container#classroom-in-box-container
   //-   #classroom-in-box-row.row
@@ -140,12 +140,12 @@ block content
   //-     .row
   //-       .col-lg-7.col-sm-8.col-sm-push-4.col-lg-push-3
   //-         blockquote
-  //-           h3(data-i18n="new_home.wanted_to_do")
+  //-           h3(data-i18n="new_home.builds_concepts_up")
 
   //-       .col-lg-2.col-sm-3.col-lg-offset-1.text-center.col-sm-pull-8.col-lg-pull-7
-  //-         img.img-circle(src="/images/pages/home/dylan.png")
-  //-         h6 Dylan
-  //-         .small 3rd Grader
+  //-         img.img-circle(src="/images/pages/home/emma.png")
+  //-         h6 Emma
+  //-         .small Grade 10
 
 
   //-   h3.text-center(data-i18n="new_home.why_games")
@@ -219,7 +219,7 @@ block content
   //-           a.login-button(data-i18n="login.log_in")
 
   //-   if !serverConfig.static
-  //-     h3.text-center(data-i18n="new_home.computer_science")
+  //-     h3#concepts.text-center(data-i18n="new_home.computer_science")
   //-     #courses-row.row
   //-       - var conceptsSeen = {};
   //-       for course, courseIndex in view.courses.models
