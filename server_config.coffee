@@ -112,7 +112,7 @@ config.mongoQueue =
 config.salt = process.env.COCO_SALT or 'pepper'
 config.cookie_secret = process.env.COCO_COOKIE_SECRET or 'chips ahoy'
 
-config.isProduction = process.env.COCO_PROD_MODE or false
+config.isProduction = process.env.BRUNCH_ENV or false
 
 # Domains (without subdomain prefix, with port number) for main hostname (usually codecombat.com)
 # and unsafe web-dev iFrame content (usually codecombatprojects.com).
