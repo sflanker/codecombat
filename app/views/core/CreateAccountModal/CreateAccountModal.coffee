@@ -71,7 +71,7 @@ module.exports = class CreateAccountModal extends ModalView
       authModalInitialValues: {}
       accountCreated: false
       signupForm: {
-        subscribe: ['on'] # checked by default
+        subscribe: ['off'] # checked by default
       }
       subModalContinue: options.subModalContinue
       wantInSchool: false
