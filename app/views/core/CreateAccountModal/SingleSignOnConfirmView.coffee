@@ -18,6 +18,20 @@ module.exports = class SingleSignOnConfirmView extends BasicInfoView
 
   afterRender: ->
     super()
+    if @signupState.get('path') is 'student'
+      currentForm = @signupState.get('signupForm')
+      emailObj = _.pick(@signupState.get('ssoAttrs') or {'email': ''}, 'email')
+      newUserName = emailObj.email.substring(0, emailObj.email.lastIndexOf("@"))
+      currentForm.name = newUserName
+      @signupState.set {
+        signupForm: currentForm
+      }
+      @$('input[name="name"]').val(newUserName)
+      forms.clearFormAlerts(@$el.find('input[name="name"]').closest('.form-group').parent())
+      # The below two lines are WIP code - the user shouldn't have to click submit
+      #debugger;
+      #@$('form').submit()
+
     if @signupState.get('path') is 'teacher'
       @$('form').submit()
 
