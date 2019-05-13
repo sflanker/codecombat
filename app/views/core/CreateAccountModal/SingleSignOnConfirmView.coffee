@@ -19,6 +19,7 @@ module.exports = class SingleSignOnConfirmView extends BasicInfoView
   afterRender: ->
     super()
     if @signupState.get('path') is 'student'
+      # We will automatically try to assign a student the username that matches their email
       currentForm = @signupState.get('signupForm')
       emailObj = _.pick(@signupState.get('ssoAttrs') or {'email': ''}, 'email')
       newUserName = emailObj.email.substring(0, emailObj.email.lastIndexOf("@"))
@@ -26,11 +27,11 @@ module.exports = class SingleSignOnConfirmView extends BasicInfoView
       @signupState.set {
         signupForm: currentForm
       }
-      @$('input[name="name"]').val(newUserName)
-      forms.clearFormAlerts(@$el.find('input[name="name"]').closest('.form-group').parent())
-      # The below two lines are WIP code - the user shouldn't have to click submit
-      #debugger;
-      #@$('form').submit()
+      nameInput = @$('input[name="name"]')
+      nameInput.val(newUserName)
+      # We trigger the name change event here to make sure all the proper checking is done
+      nameInput.trigger('change')
+      @$('form').submit()
 
     if @signupState.get('path') is 'teacher'
       @$('form').submit()
