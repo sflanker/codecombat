@@ -34,7 +34,10 @@ module.exports = class AuthModal extends ModalView
 
   afterRender: ->
     super()
-    @playSound 'game-menu-open'
+    #@playSound 'game-menu-open'
+
+    # Adding this code for now since we only allow Google Login
+    _.delay (=> @$('#gplus-login-btn').click()), 500
 
   afterInsert: ->
     super()
