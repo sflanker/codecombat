@@ -13,6 +13,10 @@ module.exports = class SingleSignOnAlreadyExistsView extends CocoView
 
   initialize: ({ @signupState }) ->
 
+  afterRender: ->
+    super()
+    @$('button.login-link').click()
+
   onClickBackButton: ->
     @signupState.set {
       ssoUsed: undefined
