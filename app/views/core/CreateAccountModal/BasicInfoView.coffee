@@ -56,6 +56,7 @@ module.exports = class BasicInfoView extends CocoView
   afterRender: ->
     @$el.find('#first-name-input').focus()
     super()
+    @$el.find('#gplus-signup-btn').click()
 
   # These values are passed along to AuthModal if the user clicks "Sign In" (handled by CreateAccountModal)
   updateAuthModalInitialValues: (values) ->
