@@ -20,6 +20,11 @@ module.exports = class AuthModal extends ModalView
     'click #close-modal': 'hide'
     'click [data-toggle="coco-modal"][data-target="core/RecoverModal"]': 'openRecoverModal'
 
+  enableAndClickGPlus: ->
+    btn = @$('#gplus-login-btn')
+    btn.attr('disabled', false)
+    btn.click()
+
   # Initialization
 
   initialize: (options={}) ->
@@ -28,16 +33,13 @@ module.exports = class AuthModal extends ModalView
 
     unless me.onChinaInfra()
       # TODO: Switch to promises and state, rather than using defer to hackily enable buttons after render
-      application.gplusHandler.loadAPI({ success: => _.defer => @$('#gplus-login-btn').attr('disabled', false) })
+      application.gplusHandler.loadAPI({ success: => _.defer => @enableAndClickGPlus() })
       application.facebookHandler.loadAPI({ success: => _.defer => @$('#facebook-login-btn').attr('disabled', false) })
     @subModalContinue = options.subModalContinue
 
   afterRender: ->
     super()
     #@playSound 'game-menu-open'
-
-    # Adding this code for now since we only allow Google Login
-    _.delay (=> @$('#gplus-login-btn').click()), 500
 
   afterInsert: ->
     super()
