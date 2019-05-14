@@ -107,6 +107,7 @@ module.exports = class AuthModal extends ModalView
     btn.find('.sign-in-blurb').text($.i18n.t('login.sign_in_with_gplus'))
     btn.attr('disabled', false)
     errors.showNotyNetworkError(arguments...)
+    @$('#switch-to-signup-btn').click()
 
 
   # Facebook
