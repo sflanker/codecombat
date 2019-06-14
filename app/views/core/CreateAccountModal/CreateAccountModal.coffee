@@ -167,7 +167,7 @@ module.exports = class CreateAccountModal extends ModalView
 
     unless me.onChinaInfra()
       # TODO: Switch to promises and state, rather than using defer to hackily enable buttons after render
-      application.facebookHandler.loadAPI({ success: => @signupState.set { facebookEnabled: true } unless @destroyed })
+      #application.facebookHandler.loadAPI({ success: => @signupState.set { facebookEnabled: true } unless @destroyed })
       application.gplusHandler.loadAPI({ success: => @signupState.set { gplusEnabled: true } unless @destroyed })
 
     @once 'hidden', ->
