@@ -104,7 +104,10 @@ module.exports = class TeacherClassesView extends RootView
     @teacherID = (me.isAdmin() and utils.getQueryVariable('teacherID')) or me.id
     @classrooms = new Classrooms()
     @classrooms.comparator = (a, b) -> b.id.localeCompare(a.id)
-    @classrooms.fetchByOwner(@teacherID)
+    if (me.isSuper())
+      @classrooms.fetchAll()
+    else
+      @classrooms.fetchByOwner(@teacherID)
     @supermodel.trackCollection(@classrooms)
     @listenTo @classrooms, 'sync', ->
       for classroom in @classrooms.models
