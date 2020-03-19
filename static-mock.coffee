@@ -16,6 +16,7 @@ exports.me =
   hasSubscription: () -> false
   isTeacher: () -> false
   isAdmin: () -> false
+  isSuper: () -> false
   level: () -> 1
   onChinaInfra: -> false
   gems: () -> 0
@@ -27,7 +28,7 @@ exports.me =
   freeOnly: -> false
 
 exports.view =
-  forumLink: () -> 'http://discourse.codecombat.com/'
+  forumLink: () -> 'http://code.haumana.io/'
   isMobile: () -> false
   showAds: () -> false
   isOldBrowser: () -> false
