@@ -9,7 +9,7 @@ module.exports = {
   getters:
     isAnonymous: (state) -> state.anonymous is true
     forumLink: (state) ->
-      link = 'http://discourse.codecombat.com/'
+      link = 'http://code.haumana.io/'
       lang = (state.preferredLanguage or 'en-US').split('-')[0]
       if lang in ['zh', 'ru', 'es', 'fr', 'pt', 'de', 'nl', 'lt']
         link += "c/other-languages/#{lang}"
@@ -17,6 +17,9 @@ module.exports = {
     isAdmin: (state) ->
       permissions = state.permissions or []
       return permissions.indexOf('admin') > -1
+    isSuper: (state) ->
+      permissions = state.permissions or []
+      return permissions.indexOf('super') > -1
     isLicensor: (state) ->
       (state?.permissions or []).indexOf('licensor') > -1
 
