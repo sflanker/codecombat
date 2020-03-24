@@ -80,11 +80,11 @@ module.exports = class CreateAccountModal extends ModalView
     { startOnPath} = options
     switch startOnPath
       when 'student' then @signupState.set({ path: 'student', screen: 'segment-check' })
-      when 'individual' then @signupState.set({ path: 'individual', screen: 'segment-check' })
+      #when 'individual' then @signupState.set({ path: 'individual', screen: 'segment-check' })
       when 'teacher' then @signupState.set({ path: 'teacher', screen: if @euConfirmationRequiredInCountry() then 'eu-confirmation' else 'basic-info' })
       else
         if /^\/play/.test(location.pathname)
-          @signupState.set({ path: 'individual', screen: 'segment-check' })
+          @signupState.set({ path: 'student', screen: 'segment-check' })
     if @signupState.get('screen') is 'segment-check' and not @segmentCheckRequiredInCountry()
       @signupState.set screen: 'basic-info'
 
