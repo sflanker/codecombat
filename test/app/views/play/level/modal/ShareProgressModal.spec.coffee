@@ -19,12 +19,12 @@ describe 'ShareProgressModal', ->
       modal.render()
       _.defer done
       
-    xit 'should be positioned high enough', ->
-      jasmine.demoModal(modal)
-      link = modal.$('.continue-link')
-      linkBottom = link.offset().top + link.height()
-      background = modal.$('.background-img')
-      backgroundBottom = background.offset().top + background.height()
-      expect(linkBottom).toBeLessThan(backgroundBottom - 30)
+    # xit 'should be positioned high enough', ->
+    #   jasmine.demoModal(modal)
+    #   link = modal.$('.continue-link')
+    #   linkBottom = link.offset().top + link.height()
+    #   background = modal.$('.background-img')
+    #   backgroundBottom = background.offset().top + background.height()
+    #   expect(linkBottom).toBeLessThan(backgroundBottom - 30)
 
     it '(demo)', -> jasmine.demoModal(modal)

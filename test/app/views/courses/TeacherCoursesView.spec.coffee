@@ -59,4 +59,4 @@ describe 'TeacherCoursesView', ->
       expect(view.openModalView).not.toHaveBeenCalled()
       expect(application.router.navigate).toHaveBeenCalled()
 
-    it "remembers the selected hero" # TODO
+    #it "remembers the selected hero" # TODO

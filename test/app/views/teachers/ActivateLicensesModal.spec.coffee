@@ -64,12 +64,12 @@ describe 'ActivateLicensesModal', ->
     it 'contains all of the teacher\'s classes', ->
       expect(@modal.$('select option').length).toBe(3) # including 'All Students' options
     
-  describe 'the checklist of students', ->
-    it 'should separate the unenrolled from the enrolled students'
+  # describe 'the checklist of students', ->
+  #   it 'should separate the unenrolled from the enrolled students'
     
-    it 'should have a checkmark by the selected students'
+  #   it 'should have a checkmark by the selected students'
 
-    it 'should display all the students'
+  #   it 'should display all the students'
       
   
   describe 'the credits availble count', ->
@@ -80,7 +80,7 @@ describe 'ActivateLicensesModal', ->
     it 'should show the number of selected students', ->
       expect(@modal.$('#total-selected-span').html()).toBe('3')
     
-    it 'should fire off one request when clicked'
+    #it 'should fire off one request when clicked'
     
     describe 'when the teacher has enough licenses', ->
       beforeEach ->

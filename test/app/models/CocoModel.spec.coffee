@@ -108,45 +108,6 @@ describe 'CocoModel', ->
       request = jasmine.Ajax.requests.mostRecent()
       expect(request).toBeUndefined()
 
-  xdescribe 'Achievement polling', ->
-    # TODO: Figure out how to do debounce in tests so that this test doesn't need to use keepDoingUntil
-
-    it 'achievements are polled upon saving a model', (done) ->
-      #spyOn(CocoModel, 'pollAchievements')
-      Backbone.Mediator.subscribe 'achievements:new', (collection) ->
-        Backbone.Mediator.unsubscribe 'achievements:new'
-        expect(collection.constructor.name).toBe('NewAchievementCollection')
-        done()
-
-      b = new BlandClass({})
-      res = b.save()
-      request = jasmine.Ajax.requests.mostRecent()
-      request.respondWith(status: 200, responseText: '{}')
-
-      collection = []
-      model =
-        _id: "5390f7637b4d6f2a074a7bb4"
-        achievement: "537ce4855c91b8d1dda7fda8"
-      collection.push model
-
-      utils.keepDoingUntil (ready) ->
-        request = jasmine.Ajax.requests.mostRecent()
-        achievementURLMatch = (/.*achievements\?notified=false$/).exec request.url
-        if achievementURLMatch
-          ready true
-        else return ready false
-
-        request.respondWith {status: 200, responseText: JSON.stringify collection}
-
-        utils.keepDoingUntil (ready) ->
-          request = jasmine.Ajax.requests.mostRecent()
-          userURLMatch = (/^\/db\/user\/[a-zA-Z0-9]*$/).exec request.url
-          if userURLMatch
-            ready true
-          else return ready false
-
-          request.respondWith {status:200, responseText: JSON.stringify me}
-
   describe 'updateI18NCoverage', ->
     class FlexibleClass extends CocoModel
       @className: 'Flexible'
