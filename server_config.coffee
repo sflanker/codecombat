@@ -75,7 +75,7 @@ config.paypal =
 if config.unittest
   config.port += 1
   config.ssl_port += 1
-  config.mongo.host = 'localhost'
+  config.mongo.host = process.env.COCO_MONGO_HOST or process.env.DATA_DB_HOST or 'localhost'
 else
   config.mongo.username = process.env.COCO_MONGO_USERNAME or process.env.DATA_DB_USER or ''
   config.mongo.password = process.env.COCO_MONGO_PASSWORD or process.env.DATA_DB_PASS or ''
