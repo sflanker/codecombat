@@ -71,29 +71,6 @@ describe 'ConvertToTeacherAccountView (/teachers/update-account)', ->
     it 'prevents navigating away', ->
       expect(_.result(view, 'onLeaveMessage')).toBeTruthy()
 
-
-  describe 'when the user already has a TrialRequest and is a teacher', ->
-    beforeEach (done) ->
-      spyOn(me, 'isTeacher').and.returnValue(true)
-      _.last(view.trialRequests.fakeRequests).respondWith({
-        status: 200
-        responseText: JSON.stringify([{
-          _id: '1'
-          properties: {
-            firstName: 'First'
-            lastName: 'Last'
-          }
-        }])
-      })
-      _.defer done # Let SuperModel finish
-
-    # TODO: re-enable when student and teacher areas are enforced
-    xit 'redirects to /teachers/courses', ->
-      expect(application.router.navigate).toHaveBeenCalled()
-      args = application.router.navigate.calls.argsFor(0)
-      expect(args[0]).toBe('/teachers/courses')
-
-
   describe 'when the user has role "student"', ->
     beforeEach ->
       me.set('role', 'student')

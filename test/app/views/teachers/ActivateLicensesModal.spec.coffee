@@ -106,34 +106,3 @@ describe 'ActivateLicensesModal', ->
     describe 'when the teacher doesn\'t have enough licenses', ->
       it 'should be disabled', ->
         expect(@modal.$('#activate-licenses-btn').hasClass('disabled')).toBe(true)
-        
-  describe 'the Purchase More button', ->
-    it 'should redirect to the license purchasing page'
-    
-  
-      
-    
-  
-  #
-  # describe 'enroll button', ->
-  #   beforeEach (done) ->
-    #   makeModal.bind(this)(done)
-  #
-  #   it 'should display the correct total number of credits', ->
-  #     expect(@modal.$('#total-available').html()).toBe('2')
-  #
-  #   it 'should be disabled when teacher doesn\'t have enough licenses', ->
-  #     expect(@modal.$('#total-available').html()).toBe('2')
-  #
-  #
-  #
-  # describe 'when enrolling only a single student', ->
-  #   describe 'the list of students', ->
-  #     it 'should only have the one student selected'
-  #
-  # describe 'when bulk-enrolling students', ->
-  #   describe 'the list of students', ->
-  #     it 'should have the right students selected'
-  #
-  # describe 'selecting more students', ->
-  #   it 'should increase the student counter'
