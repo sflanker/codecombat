@@ -29,18 +29,18 @@ if (cocoKeysPresent) {
 }
 
 // 2. Clear most environmental variables anyway
-process.env = _.pick(process.env, 'COCO_CHINA_INFRASTRUCTURE');
+//process.env = _.pick(process.env, 'COCO_CHINA_INFRASTRUCTURE');
 
 // 3. Check server_config
 global.testing = true;
 var config = require('../../server_config');
-if(config.mongo.host !== 'localhost') {
+/*if(config.mongo.host !== 'localhost') {
   throw Error('Stopping server tests because mongo host is not localhost.');
-}
+}*/
 
 // 4. Check database string
 var database = require('../../server/commons/database');
-var dbString = 'mongodb://localhost:27017/coco_unittest';
+var dbString = 'mongodb://'+config.mongo.host+':27017/coco_unittest';
 if (database.generateMongoConnectionString() !== dbString) {
   throw Error('Stopping server tests because db connection string was not as expected.');
 }
