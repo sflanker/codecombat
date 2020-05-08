@@ -60,12 +60,12 @@ describe 'EditStudentModal', ->
         request = jasmine.Ajax.requests.mostRecent()
         expect(request).toBeDefined()
 
-      xit 'updates the button', ->
-        request1 = jasmine.Ajax.requests.mostRecent()
-        fail "Expected a request to be sent" unless request1
-        modal.$('.new-password-input').val(newPassword).change().trigger('input')
-        modal.$('.change-password-btn').click()
-        request2 = jasmine.Ajax.requests.mostRecent()
-        expect(request1).not.toBe(request2)
-        request1?.respondWith({ status: 200, responseText: JSON.stringify(user) })
-        expect(modal.$('.change-password-btn [data-i18n]').data('i18n')).toEqual('teacher.changed')
+      # xit 'updates the button', ->
+      #   request1 = jasmine.Ajax.requests.mostRecent()
+      #   fail "Expected a request to be sent" unless request1
+      #   modal.$('.new-password-input').val(newPassword).change().trigger('input')
+      #   modal.$('.change-password-btn').click()
+      #   request2 = jasmine.Ajax.requests.mostRecent()
+      #   expect(request1).not.toBe(request2)
+      #   request1?.respondWith({ status: 200, responseText: JSON.stringify(user) })
+      #   expect(modal.$('.change-password-btn [data-i18n]').data('i18n')).toEqual('teacher.changed')

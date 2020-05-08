@@ -104,49 +104,6 @@ describe 'Camera (Surface point of view)', ->
     expect(cam.x2z).toBeCloseTo 1 / Math.cos angle
     expect(cam.z2y).toBeCloseTo (4 / 3) * Math.cos angle
 
-  xit 'works at 2x zoom, 90 degrees', ->
-    cam = new Camera {attr: (attr) -> 100}, Math.PI / 2
-    cam.zoomTo null, 2, 0
-    checkCameraPos cam
-    wop = x: 5, y: 2.5, z: 7
-    cap = cam.worldToCanvas wop
-    expectPositionsEqual cap, {x: 50, y: 100}
-    cam.zoomTo {x: 50, y: 75}, 2, 0
-    checkCameraPos cam
-    cap = cam.worldToCanvas wop
-    expectPositionsEqual cap, {x: 50, y: 50}
-    cam.zoomTo {x: 50, y: 75}, 4, 0
-    checkCameraPos cam
-    cap = cam.worldToCanvas wop
-    expectPositionsEqual cap, {x: 50, y: 50}
-    # Now let's try zooming on the edge of the screen; we should be bounded to the surface viewport
-    cam.zoomTo {x: 100, y: 100}, 2, 0
-    checkCameraPos cam
-    cap = cam.worldToCanvas wop
-    expectPositionsEqual cap, {x: 0, y: 50}
-
-  xit 'works at 2x zoom, 30 degrees', ->
-    cam = new Camera {attr: (attr) -> 100}, Math.PI / 6
-    cam.zoomTo null, 2, 0
-    expect(cam.x2y).toBeCloseTo 1
-    expect(cam.x2z).toBeGreaterThan 9001
-    checkCameraPos cam
-    wop = x: 5, y: 4, z: 6 * cam.y2z  # like x: 5, y: 10 out of world width: 10, height: 20
-    sup = cam.worldToSurface wop
-    expect(cam.surfaceToWorld(sup).y).toBeCloseTo 10
-    expectPositionsEqual sup, {x: 50, y: 50}
-    cap = cam.surfaceToCanvas sup
-    expectPositionsEqual cap, {x: 50, y: 50}
-    # Zoom to bottom edge of screen
-    cam.zoomTo {x: 50, y: 100}, 2, 0
-    checkCameraPos cam
-    cap = cam.worldToCanvas wop
-    expectPositionsEqual cap, {x: 50, y: 0}
-    cam.zoomTo {x: 50, y: 100}, 4, 0
-    checkCameraPos cam
-    cap = cam.worldToCanvas wop
-    expectPositionsEqual cap, {x: 50, y: -100}
-
   it 'works at 2x zoom, 60 degree hFOV', ->
     cam = new Camera {attr: (attr) -> 100}, null, Math.PI / 3
     cam.zoomTo null, 2, 0
@@ -156,17 +113,3 @@ describe 'Camera (Surface point of view)', ->
     cam = new Camera {attr: (attr) -> if attr is 'height' then 63.041494 else 100}, null, Math.PI / 3
     cam.zoomTo null, 2, 0
     checkCameraPos cam
-
-  xit 'works at 2x zoom on a surface wider than it is tall, 30 degrees, default viewing upper left corner', ->
-    cam = new Camera {attr: (attr) -> 100}, Math.PI / 6  # 200 * Camera.MPP, 2 * 50 * Camera.MPP
-    cam.zoomTo null, 2, 0
-    checkCameraPos cam
-    expect(cam.zoom).toBeCloseTo 2
-    wop = x: 5, y: 4, z: 6 * cam.y2z  # like x: 5, y: 10 out of world width: 20, height: 10
-    cap = cam.worldToCanvas wop
-    expectPositionsEqual cap, {x: 100, y: 0}
-    # Zoom to far right edge of screen and try to zoom out
-    cam.zoomTo {x: 9001, y: 25}, 0.1, 0
-    checkCameraPos cam
-    cap = cam.worldToCanvas wop
-    expectPositionsEqual cap, {x: -200, y: 0}

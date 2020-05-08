@@ -50,22 +50,6 @@ describe 'Vector', ->
     expectEquivalentMethods 'equals', new Vector 7, 7
     expectEquivalentMethods 'copy'
 
-  xit "doesn't mutate when in player code", ->
-    # We can't run these tests easily because it depends on being in interpreter mode now
-    expectNoMutation = (fn) ->
-      v = new Vector 5, 5
-      v2 = fn v
-      expect(v.x).toEqual 5
-      expect(v).not.toBe v2
-
-    expectNoMutation (v) -> v.normalize()
-    expectNoMutation (v) -> v.limit 2
-    expectNoMutation (v) -> v.subtract new Vector 2, 2
-    expectNoMutation (v) -> v.add new Vector 2, 2
-    expectNoMutation (v) -> v.divide 2
-    expectNoMutation (v) -> v.multiply 2
-    expectNoMutation (v) -> v.rotate 0.5
-
   it 'mutates when not in player code', ->
     expectMutation = (fn) ->
       v = new Vector 5, 5

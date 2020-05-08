@@ -16,165 +16,165 @@ responses = {
 }
 
 
-xdescribe 'CreateAccountModal', ->
+# xdescribe 'CreateAccountModal', ->
 
-  modal = null
+#   modal = null
 
-#  initModal = (options) -> ->
-#    application.facebookHandler.fakeAPI()
-#    application.gplusHandler.fakeAPI()
-#    modal = new CreateAccountModal(options)
-#    jasmine.demoModal(modal)
+# #  initModal = (options) -> ->
+# #    application.facebookHandler.fakeAPI()
+# #    application.gplusHandler.fakeAPI()
+# #    modal = new CreateAccountModal(options)
+# #    jasmine.demoModal(modal)
 
-  describe 'click SIGN IN button', ->
-    it 'switches to AuthModal', ->
-      modal = new CreateAccountModal()
-      modal.render()
-      jasmine.demoModal(modal)
-      spyOn(modal, 'openModalView')
-      modal.$('.login-link').click()
-      expect(modal.openModalView).toHaveBeenCalled()
+#   describe 'click SIGN IN button', ->
+#     it 'switches to AuthModal', ->
+#       modal = new CreateAccountModal()
+#       modal.render()
+#       jasmine.demoModal(modal)
+#       spyOn(modal, 'openModalView')
+#       modal.$('.login-link').click()
+#       expect(modal.openModalView).toHaveBeenCalled()
 
-  describe 'ChooseAccountTypeView', ->
-    beforeEach ->
-      modal = new CreateAccountModal()
-      modal.render()
-      jasmine.demoModal(modal)
+#   describe 'ChooseAccountTypeView', ->
+#     beforeEach ->
+#       modal = new CreateAccountModal()
+#       modal.render()
+#       jasmine.demoModal(modal)
 
-    describe 'click sign up as TEACHER button', ->
-      beforeEach ->
-        spyOn application.router, 'navigate'
-        modal.$('.teacher-path-button').click()
+#     describe 'click sign up as TEACHER button', ->
+#       beforeEach ->
+#         spyOn application.router, 'navigate'
+#         modal.$('.teacher-path-button').click()
 
-      it 'switches to BasicInfoView and sets "path" to "teacher"', ->
-        expect(modal.signupState.get('path')).toBe('teacher')
-        expect(modal.signupState.get('screen')).toBe('basic-info')
+#       it 'switches to BasicInfoView and sets "path" to "teacher"', ->
+#         expect(modal.signupState.get('path')).toBe('teacher')
+#         expect(modal.signupState.get('screen')).toBe('basic-info')
 
-    describe 'click sign up as STUDENT button', ->
-      beforeEach ->
-        modal.$('.student-path-button').click()
+#     describe 'click sign up as STUDENT button', ->
+#       beforeEach ->
+#         modal.$('.student-path-button').click()
 
-      it 'switches to SegmentCheckView and sets "path" to "student"', ->
-        expect(modal.signupState.get('path')).toBe('student')
-        expect(modal.signupState.get('screen')).toBe('segment-check')
+#       it 'switches to SegmentCheckView and sets "path" to "student"', ->
+#         expect(modal.signupState.get('path')).toBe('student')
+#         expect(modal.signupState.get('screen')).toBe('segment-check')
 
-  describe 'SegmentCheckView', ->
+#   describe 'SegmentCheckView', ->
 
-    segmentCheckView = null
+#     segmentCheckView = null
 
-    describe 'STUDENT path', ->
-      beforeEach (done) ->
-        modal = new CreateAccountModal()
-        modal.render()
-        jasmine.demoModal(modal)
-        modal.$('.student-path-button').click()
-        segmentCheckView = modal.subviews.segment_check_view
-        spyOn(segmentCheckView, 'checkClassCodeDebounced')
-        _.defer done
+#     describe 'STUDENT path', ->
+#       beforeEach (done) ->
+#         modal = new CreateAccountModal()
+#         modal.render()
+#         jasmine.demoModal(modal)
+#         modal.$('.student-path-button').click()
+#         segmentCheckView = modal.subviews.segment_check_view
+#         spyOn(segmentCheckView, 'checkClassCodeDebounced')
+#         _.defer done
 
-      it 'has a classCode input', ->
-        expect(modal.$('.class-code-input').length).toBe(1)
+#       it 'has a classCode input', ->
+#         expect(modal.$('.class-code-input').length).toBe(1)
 
-      it 'checks the class code when the input changes', ->
-        modal.$('.class-code-input').val('test').trigger('input')
-        expect(segmentCheckView.checkClassCodeDebounced).toHaveBeenCalled()
+#       it 'checks the class code when the input changes', ->
+#         modal.$('.class-code-input').val('test').trigger('input')
+#         expect(segmentCheckView.checkClassCodeDebounced).toHaveBeenCalled()
 
-      describe 'fetchClassByCode()', ->
-        it 'is memoized', ->
-          promise1 = segmentCheckView.fetchClassByCode('testA')
-          promise2 = segmentCheckView.fetchClassByCode('testA')
-          promise3 = segmentCheckView.fetchClassByCode('testB')
-          expect(promise1).toBe(promise2)
-          expect(promise1).not.toBe(promise3)
+#       describe 'fetchClassByCode()', ->
+#         it 'is memoized', ->
+#           promise1 = segmentCheckView.fetchClassByCode('testA')
+#           promise2 = segmentCheckView.fetchClassByCode('testA')
+#           promise3 = segmentCheckView.fetchClassByCode('testB')
+#           expect(promise1).toBe(promise2)
+#           expect(promise1).not.toBe(promise3)
 
-      describe 'checkClassCode()', ->
-        it 'shows a success message if the classCode is found', ->
-          request = jasmine.Ajax.requests.mostRecent()
-          expect(_.string.startsWith(request.url, '/db/classroom')).toBe(false)
-          modal.$('.class-code-input').val('test').trigger('input')
-          segmentCheckView.checkClassCode()
-          request = jasmine.Ajax.requests.mostRecent()
-          expect(_.string.startsWith(request.url, '/db/classroom')).toBe(true)
-          request.respondWith({
-            status: 200
-            responseText: JSON.stringify({
-              data: factories.makeClassroom({name: 'Some Classroom'}).toJSON()
-              owner: factories.makeUser({name: 'Some Teacher'}).toJSON()
-            })
-          })
+#       describe 'checkClassCode()', ->
+#         it 'shows a success message if the classCode is found', ->
+#           request = jasmine.Ajax.requests.mostRecent()
+#           expect(_.string.startsWith(request.url, '/db/classroom')).toBe(false)
+#           modal.$('.class-code-input').val('test').trigger('input')
+#           segmentCheckView.checkClassCode()
+#           request = jasmine.Ajax.requests.mostRecent()
+#           expect(_.string.startsWith(request.url, '/db/classroom')).toBe(true)
+#           request.respondWith({
+#             status: 200
+#             responseText: JSON.stringify({
+#               data: factories.makeClassroom({name: 'Some Classroom'}).toJSON()
+#               owner: factories.makeUser({name: 'Some Teacher'}).toJSON()
+#             })
+#           })
 
-      describe 'on submit with class code', ->
+#       describe 'on submit with class code', ->
 
-        classCodeRequest = null
+#         classCodeRequest = null
 
-        beforeEach ->
-          request = jasmine.Ajax.requests.mostRecent()
-          expect(_.string.startsWith(request.url, '/db/classroom')).toBe(false)
-          modal.$('.class-code-input').val('test').trigger('input')
-          modal.$('form.segment-check').submit()
-          classCodeRequest = jasmine.Ajax.requests.mostRecent()
-          expect(_.string.startsWith(classCodeRequest.url, '/db/classroom')).toBe(true)
+#         beforeEach ->
+#           request = jasmine.Ajax.requests.mostRecent()
+#           expect(_.string.startsWith(request.url, '/db/classroom')).toBe(false)
+#           modal.$('.class-code-input').val('test').trigger('input')
+#           modal.$('form.segment-check').submit()
+#           classCodeRequest = jasmine.Ajax.requests.mostRecent()
+#           expect(_.string.startsWith(classCodeRequest.url, '/db/classroom')).toBe(true)
 
-        describe 'when the classroom IS found', ->
-          beforeEach (done) ->
-            classCodeRequest.respondWith({
-              status: 200
-              responseText: JSON.stringify({
-                data: factories.makeClassroom({name: 'Some Classroom'}).toJSON()
-                owner: factories.makeUser({name: 'Some Teacher'}).toJSON()
-              })
-            })
-            _.defer done
+#         describe 'when the classroom IS found', ->
+#           beforeEach (done) ->
+#             classCodeRequest.respondWith({
+#               status: 200
+#               responseText: JSON.stringify({
+#                 data: factories.makeClassroom({name: 'Some Classroom'}).toJSON()
+#                 owner: factories.makeUser({name: 'Some Teacher'}).toJSON()
+#               })
+#             })
+#             _.defer done
 
-          it 'navigates to the BasicInfoView', ->
-            expect(modal.signupState.get('screen')).toBe('basic-info')
+#           it 'navigates to the BasicInfoView', ->
+#             expect(modal.signupState.get('screen')).toBe('basic-info')
 
-          describe 'on the BasicInfoView for students', ->
+#           describe 'on the BasicInfoView for students', ->
 
 
-        describe 'when the classroom IS NOT found', ->
-          beforeEach (done) ->
-            classCodeRequest.respondWith({
-              status: 404
-              responseText: '{}'
-            })
-            segmentCheckView.once 'special-render', done
+#         describe 'when the classroom IS NOT found', ->
+#           beforeEach (done) ->
+#             classCodeRequest.respondWith({
+#               status: 404
+#               responseText: '{}'
+#             })
+#             segmentCheckView.once 'special-render', done
 
-          it 'shows an error', ->
-            expect(modal.$('[data-i18n="signup.classroom_not_found"]').length).toBe(1)
+#           it 'shows an error', ->
+#             expect(modal.$('[data-i18n="signup.classroom_not_found"]').length).toBe(1)
 
-  describe 'ConfirmationView', ->
-    confirmationView = null
+#   describe 'ConfirmationView', ->
+#     confirmationView = null
 
-    beforeEach ->
-      modal = new CreateAccountModal()
-      modal.signupState.set('screen', 'confirmation')
-      modal.render()
-      jasmine.demoModal(modal)
-      confirmationView = modal.subviews.confirmation_view
+#     beforeEach ->
+#       modal = new CreateAccountModal()
+#       modal.signupState.set('screen', 'confirmation')
+#       modal.render()
+#       jasmine.demoModal(modal)
+#       confirmationView = modal.subviews.confirmation_view
 
-    it '(for demo testing)', ->
-      me.set('name', 'A Sweet New Username')
-      me.set('email', 'some@email.com')
-      confirmationView.signupState.set('ssoUsed', 'gplus')
+#     it '(for demo testing)', ->
+#       me.set('name', 'A Sweet New Username')
+#       me.set('email', 'some@email.com')
+#       confirmationView.signupState.set('ssoUsed', 'gplus')
 
-  describe 'SingleSignOnConfirmView', ->
-    singleSignOnConfirmView = null
+#   describe 'SingleSignOnConfirmView', ->
+#     singleSignOnConfirmView = null
 
-    beforeEach ->
-      modal = new CreateAccountModal()
-      modal.signupState.set({
-        screen: 'sso-confirm'
-        email: 'some@email.com'
-      })
-      modal.render()
-      jasmine.demoModal(modal)
-      singleSignOnConfirmView = modal.subviews.single_sign_on_confirm_view
+#     beforeEach ->
+#       modal = new CreateAccountModal()
+#       modal.signupState.set({
+#         screen: 'sso-confirm'
+#         email: 'some@email.com'
+#       })
+#       modal.render()
+#       jasmine.demoModal(modal)
+#       singleSignOnConfirmView = modal.subviews.single_sign_on_confirm_view
 
-    it '(for demo testing)', ->
-      me.set('name', 'A Sweet New Username')
-      me.set('email', 'some@email.com')
-      singleSignOnConfirmView.signupState.set('ssoUsed', 'facebook')
+#     it '(for demo testing)', ->
+#       me.set('name', 'A Sweet New Username')
+#       me.set('email', 'some@email.com')
+#       singleSignOnConfirmView.signupState.set('ssoUsed', 'facebook')
 
 describe 'CreateAccountModal Vue Components', ->
   describe 'TeacherSignupComponent', ->

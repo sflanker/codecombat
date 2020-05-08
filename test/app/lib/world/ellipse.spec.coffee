@@ -34,16 +34,6 @@ describe 'Ellipse', ->
     expect(ellipse.containsPoint new Vector(-2, 0)).toBe false
     expect(ellipse.containsPoint new Vector(-2, 4)).toBe false
 
-  xit 'correctly calculates distance to a faraway point', ->
-    # TODO: this is the correct distance if the ellipse were a rectangle, but need to update for actual ellipse expected distances.
-    ellipse = new Ellipse 100, 50, 20, 40
-    p = new Vector 200, 300
-    d = 10 * Math.sqrt(610)
-    expect(ellipse.distanceToPoint(p)).toBeCloseTo d
-    ellipse.rotation = Math.PI / 2
-    d = 80 * Math.sqrt(10)
-    expect(ellipse.distanceToPoint(p)).toBeCloseTo d
-
   it 'does not modify itself or target Vector when calculating distance', ->
     ellipse = new Ellipse -100, -200, 1, 100
     ellipse2 = ellipse.copy()
