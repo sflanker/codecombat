@@ -78,15 +78,6 @@ describe 'CocoView', ->
 
       it '(demo)', -> jasmine.demoEl(view.$el)
       
-
-
-    describe 'when the server returns 402', ->
-
-      beforeEach -> respond(402)
-
-      it 'does nothing, because it is up to the view to handle payment next steps'
-
-    
     describe 'when the server returns 403', ->
 
       beforeEach ->
