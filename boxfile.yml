@@ -15,6 +15,7 @@ run.config:
     - mongodb34-tools-3.4.13
   # we use these extra steps instead of npm postinstall because of the yarn settings
   extra_steps:
+    - npm i -g npm
     - yarn config set ignore-engines true
     - npm install
     #- bower --config.analytics=false install
