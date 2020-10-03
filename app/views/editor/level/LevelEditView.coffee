@@ -116,7 +116,10 @@ module.exports = class LevelEditView extends RootView
       for levelID, level of campaign.get('levels') when levelID is @level.get('original')
         @courseID = campaignCourseMap[campaign.id]
       break if @courseID
-    if not @courseID and me.isAdmin()
+    # The code used to require admin permission to test all levels in course mode.
+    # But now any user can do it (because Code Haumana is course mode only).
+    # if not @courseID and me.isAdmin()
+    if not @courseID
       # Give it a fake course ID so we can test it in course mode before it's in a course.
       @courseID = '560f1a9f22961295f9427742'
     @getLevelCompletionRate()
