@@ -85,37 +85,62 @@ body
 #level-loading-view .left-wing, #level-loading-view .right-wing
   background-image: none !important
   background: $dark-purple !important
-#spell-view span.code-background{
-  border-width:0 !important;
-}
-  #thang-hud{
-    height:85px;
-   .wood-background{
-     background: #24225C;
-   }
-  }
+#spell-view span.code-background
+  border-width: 0 !important
 
-    .modal-dialog{
-#course-victory-modal .background-wrapper, #picoctf-victory-modal .background-wrapper{
-border-image:none !important;
-}
-.modal-content{
-  box-shadow:0 0 0;
-.modal-body{
- background: #24225C;
- padding-bottom: 20px;
- img{
-   display:none;
- }
- }
-}
-}
-  .well-parchment{
-    border: 0 solid #fff !important;
-    background: #EFEBF8 !important;
-  }
-.loading-container.preview{
-  img{
-    display:none;
-  }
-}
+#thang-hud
+  height: 85px !important
+  .wood-background
+    background: #24225C !important
+
+.modal-dialog
+  #course-victory-modal .background-wrapper, #picoctf-victory-modal .background-wrapper
+   border-image: none !important
+   .modal-content
+     box-shadow: 0 0 0
+     .modal-body
+       background: #24225C
+       padding-bottom: 20px
+       img
+        display: none
+
+.well-parchment
+    border: 0 solid #fff !important
+    background: #EFEBF8 !important
+
+.loading-container.preview
+  img
+    display: none
+div#editor-level-home-view.site-chrome.show-background
+    background: none
+    #site-nav
+      background: none
+      #nav-logo
+        display: none
+    #site-content-area
+      background: #fefefe
+      border: 3px solid #fff
+      #new-model-button
+        background-image: none
+        background-color: $dark-purple
+#editor-level-view
+    .navbar-default
+      background-color: $dark-purple
+      background-image: none
+      .navbar-header
+        border-left: 1px solid white
+        border-right: 1px solid white
+        background: purple
+div#site-footer
+  display: none
+
+.property-entry-item-group
+  img.item-image
+    display: none
+  .spell-palette-entry-view
+    margin-left: 2px
+
+.level-content #spell-palette-view .container .right .scrollArea
+  background: #DAD7F8
+  border-color: transparent
+  margin-left: 10px
