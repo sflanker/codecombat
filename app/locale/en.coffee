@@ -477,7 +477,7 @@
     concept_challenge_goal: "Concept Challenge Goal"
     combo_challenge_goal: "Challenge Level Goal"
     running: "Running..."
-    success: "Success!"
+    success: "Hoʻomaikaʻi!"
     incomplete: "Incomplete"
     timed_out: "Ran out of time"
     failing: "Failing"
