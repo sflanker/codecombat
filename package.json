@@ -32,7 +32,6 @@
   "scripts": {
     "start": "node ./index.js",
     "test": "./node_modules/.bin/karma start",
-    "preinstall": "npm install -g npm",
     "predeploy": "echo Starting deployment--hold onto your butts.; echo Skipping webpack build --production",
     "postdeploy": "echo Deployed. Unclench.",
     "postinstall": "bower --config.analytics=false install && webpack",
@@ -203,6 +202,6 @@
   "private": true,
   "engines": {
     "node": "^6.12.2",
-    "npm": "^3.10.10"
+    "npm": "^6.14.9"
   }
 }
