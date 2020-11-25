@@ -60,7 +60,7 @@
     "@vimeo/player": "^2.2.0",
     "JQDeferred": "~2.1.0",
     "ace-builds": "ajaxorg/ace-builds#ba3b91e04a5aa559d56ac70964f9054baa0f4caf",
-    "adobe-animate-parser": "github:codecombat/adobe-animate-parser#master",
+    "adobe-animate-parser": "file:vendor/packages/adobe-animate-parser",
     "aether": "~0.5.21",
     "algoliasearch": "^3.13.1",
     "async": "2.5.0",
@@ -201,7 +201,7 @@
   "license": "MIT for the code, and CC-BY for the art and music",
   "private": true,
   "engines": {
-    "node": "^6.12.2",
+    "node": "6.17.1",
     "npm": "^6.14.9"
   }
 }
