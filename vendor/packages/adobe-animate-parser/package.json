@@ -1,0 +1,52 @@
+{
+  "_from": "github:codecombat/adobe-animate-parser#master",
+  "_id": "adobe-animate-parser@0.0.3",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/adobe-animate-parser",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "github:codecombat/adobe-animate-parser#master",
+    "rawSpec": "github:codecombat/adobe-animate-parser#master",
+    "saveSpec": "github:codecombat/adobe-animate-parser#master",
+    "fetchSpec": null,
+    "gitCommittish": "master"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "github:codecombat/adobe-animate-parser#2f5bffaed594ddf84686f23210853367a5680ed2",
+  "_spec": "github:codecombat/adobe-animate-parser#master",
+  "_where": "/app",
+  "author": "",
+  "bundleDependencies": false,
+  "dependencies": {
+    "lodash.clone": "^4.5.0",
+    "lodash.create": "^4.2.0",
+    "lodash.isequal": "^4.5.0",
+    "object-hash": "^1.3.1"
+  },
+  "deprecated": false,
+  "description": "Parses CreateJS based Adobe Animate Files",
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/node": "^7.4.5",
+    "@babel/plugin-proposal-export-default-from": "^7.2.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/register": "^7.4.4",
+    "jasmine": "^3.4.0"
+  },
+  "license": "ISC",
+  "main": "index.js",
+  "name": "adobe-animate-parser",
+  "scripts": {
+    "build": "mkdir -p dist && COCO_BUILD=true babel src -d dist && cp package.json ./dist",
+    "prepare": "COCO_BUILD=true babel src -d ./",
+    "test": "jasmine"
+  },
+  "version": "0.0.3"
+}
