@@ -1,0 +1,35 @@
+name: lando-codehaumana
+# env_file:
+#   - local.env
+recipe: mean
+config:
+  node: "6"
+  # note that port cannot be included here because it interfers with the client/server port setup in the overrides below
+  #port: "3000"
+  #ssl: true
+  build:
+    - yarn config set ignore-engines true
+    - yarn install
+    # these steps are commented out because they are part of npm-install postinstall
+    #- bower --config.analytics=false install
+    #- webpack
+  command: npm start
+
+services:
+  appserver:
+    scanner: true
+    build_as_root:
+      - apt-get update -y && apt-get install -y python
+    globals:
+      webpack: latest
+      nodemon: latest
+    moreHttpPorts:
+      - "3000"
+    overrides:
+      ports: [3000:3000]
+
+tooling:
+  npm:
+    service: appserver
+  yarn:
+    service: appserver

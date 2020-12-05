@@ -39,6 +39,10 @@ config.mongo =
   mongoose_replica_string: process.env.COCO_MONGO_MONGOOSE_REPLICA_STRING or ''
   readpref: process.env.COCO_MONGO_READPREF or 'primary'
 
+if process.env.LANDO_INFO?
+  config.mongo.host = 'database'
+  config.mongo.analytics_host = 'database'
+
 if process.env.COCO_MONGO_ANALYTICS_REPLICA_STRING?
   config.mongo.analytics_replica_string = process.env.COCO_MONGO_ANALYTICS_REPLICA_STRING
 else
