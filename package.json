@@ -32,6 +32,7 @@
   "scripts": {
     "start": "node ./index.js",
     "test": "./node_modules/.bin/karma start",
+    "preinstall": "yarn config set ignore-engines true",
     "predeploy": "echo Starting deployment--hold onto your butts.; echo Skipping webpack build --production",
     "postdeploy": "echo Deployed. Unclench.",
     "postinstall": "bower --config.analytics=false install && webpack",
@@ -202,6 +203,6 @@
   "private": true,
   "engines": {
     "node": "6.17.1",
-    "npm": "^6.14.9"
+    "yarn": "1.15.2"
   }
 }
